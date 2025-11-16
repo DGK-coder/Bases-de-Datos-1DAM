@@ -1,4 +1,5 @@
 # MODELO MR DEL MODELO EED DE LA TIENDA DE VIDEOJUEGOS
+Realizado por: David García, Sergio Motoya, Pascual Calvo.
 
 - **PROVINCIA** (CodProvincia, Nombre)  
 	PK:(codProvincia)
