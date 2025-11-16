@@ -59,7 +59,9 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 - **LIMPIAR** (dniLimpieza, numSala, codTienda)
 	PK: (dniLimpieza, numSala, codTienda)  
 	FK: (dniLimpieza) --> LIMPIEZA  
-			(numSala, codTienda) --> SALA  
+			(numSala, codTienda) --> SALA
+
+  P.E: En las relaciones PROVINCIA:PRODUCTO, CATEGORIA:PRODUCTO, PRODUCTO:DEPENDIENTE, SALA:LIMPIEZA y TIENDA:PERSONAL, hay una perdida expresiva, ya que 1:N no es posible expresarlo en el modelo relacional.
 			
 
 			
