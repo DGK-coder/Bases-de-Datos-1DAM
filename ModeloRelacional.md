@@ -1,64 +1,64 @@
-MODELO MR DEL MODELO EED DE LA TIENDA DE VIDEOJUEGOS
+# MODELO MR DEL MODELO EED DE LA TIENDA DE VIDEOJUEGOS
 
-PROVINCIA (CodProvincia, Nombre)
+- **PROVINCIA** (CodProvincia, Nombre)  
 	PK:(codProvincia)
 
-PRODUCTO (id, stock, fechaVenta)
+- **PRODUCTO** (id, stock, fechaVenta)  
 	PK: (id)
 
-PROVENIR (idProducto, codProvincia)
-	PK: (idProducto, codProvincia)
-	FK: (idProducto) --> PRODUCTO
+- **PROVENIR** (idProducto, codProvincia)  
+	PK: (idProducto, codProvincia)  
+	FK: (idProducto) --> PRODUCTO  
 			(codProvincia) --> PROVINCIA
 
-CATEGORIA (id, nombre)
+- **CATEGORIA** (id, nombre)  
 	PK: (id)
 
-PERTENECER (idCategoria, idProducto)
-	PK: (idCategoria, idProducto)
-	FK: (idCategoria) --> CATEGORIA
-			(idProducto) -->  PRODUCTO
+- **PERTENECER** (idCategoria, idProducto)  
+	PK: (idCategoria, idProducto)  
+	FK: (idCategoria) --> CATEGORIA  
+			(idProducto) -->  PRODUCTO  
 
-TIENDA (codTienda, direccion, codProvincia, cantidad)
-	PK: (codTIenda)
-	FK: (codProvincia) --> PROVINCIA
-	UK: (codProvincia)
+- **TIENDA** (codTienda, direccion, codProvincia, cantidad)  
+	PK: (codTIenda)  
+	FK: (codProvincia) --> PROVINCIA  
+	UK: (codProvincia)  
 
-TELEFONO (numero, codigo)  
-	PK: (numero)	
-	FK: (codigo) --> TIENDA	
+- **TELEFONO** (numero, codigo)  
+	PK: (numero)	  
+	FK: (codigo) --> TIENDA	  
  
-DISPONER (idProducto, codTienda)	
-	PK: (idProducto, codTienda)	
-	FK: (idProducto) --> PRODUCTO	
-        (codTienda) --> TIENDA	
+- **DISPONER** (idProducto, codTienda)	
+	PK: (idProducto, codTienda)	  
+	FK: (idProducto) --> PRODUCTO	  
+        (codTienda) --> TIENDA	  
 
-SALA (num, codTienda, metrosCua, nombre)	
-	PK: (num, codTienda)	
-	FK: (codTIenda) --> TIENDA	
+- **SALA** (num, codTienda, metrosCua, nombre)	
+	PK: (num, codTienda)	  
+	FK: (codTIenda) --> TIENDA	  
 
-PERSONAL (dni, nombre, apellido1, apellido2, codTienda)	
-	PK: (dni)	
-	FK: (codTienda) --> TIENDA	
+- **PERSONAL** (dni, nombre, apellido1, apellido2, codTienda)	
+	PK: (dni)	  
+	FK: (codTienda) --> TIENDA	  
 
-DEPENDIENTE (dniDependiente, corrident, dniEns, tiempo)    	
-	PK: (dniDependiente)	
-	FK: (dniDependiente) --> PERSONAL	
-			(dniEns) --> DEPENDIENTE
+- **DEPENDIENTE** (dniDependiente, corrident, dniEns, tiempo)    	
+	PK: (dniDependiente)	  
+	FK: (dniDependiente) --> PERSONAL	  
+			(dniEns) --> DEPENDIENTE  
 			
-VENDER (dniDependiente, idProducto, cantidad) 	
-	PK: (dniDependiente, idProducto)
-	FK: (dniDependiente) --> DEPENDIENTE
-			(idProducto) --> PRODUCTO
+- **VENDER** (dniDependiente, idProducto, cantidad) 	
+	PK: (dniDependiente, idProducto)  
+	FK: (dniDependiente) --> DEPENDIENTE  
+			(idProducto) --> PRODUCTO  
 
-LIMPIEZA (dniLimpieza)
-	PK: (dniLimpieza)
-	FK: (dniLimpieza) --> PERSONAL
+- **LIMPIEZA** (dniLimpieza)
+	PK: (dniLimpieza)  
+	FK: (dniLimpieza) --> PERSONAL  
 
-LIMPIAR (dniLimpieza, numSala, codTienda)
-	PK: (dniLimpieza, numSala, codTienda)
-	FK: (dniLimpieza) --> LIMPIEZA
-			(numSala, codTienda) --> SALA
+- **LIMPIAR** (dniLimpieza, numSala, codTienda)
+	PK: (dniLimpieza, numSala, codTienda)  
+	FK: (dniLimpieza) --> LIMPIEZA  
+			(numSala, codTienda) --> SALA  
 			
 
 			
