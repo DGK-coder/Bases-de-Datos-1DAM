@@ -1,19 +1,12 @@
 ## Tablas
-- Tabla `CATEGORIA`
-
-  |Columna    |Tipo de datos  |Restricción  |Descripción                                          |
-  |-----------|---------------|-------------|-----------------------------------------------------|
-  |`ID`       |`INT`          |`PK`         |Clave primaria. código identificativo de la categoría|
-  |`Nombre`   |`VARCHAR(100)` |             |Nombre que "describe" el tipo de categoría a tratar  |
-
-- Tabla `PROVINCIA`
+  - Tabla `PROVINCIA`
 
   |Columna       |Tipo de datos  |Restricción  |Descripción                                          |
   |--------------|---------------|-------------|-----------------------------------------------------|
   |`CodProvincia`|`INT`          |`PK`         |Clave primaria. código identificativo de la provincia|
   |`Nombre`      |`VARCHAR(100)` |             |Nombre que ayuda a identificar la provincia          |
 
-- Tabla `PRODUCTO`
+  - Tabla `PRODUCTO`
 
   |Columna     |Tipo de datos |Restricción    |Descripción                                       |
   |------------|--------------|---------------|--------------------------------------------------|
@@ -21,21 +14,48 @@
   |`Stock`     |`INT`         |               |Cantidad de producto en stock                     |
   |`FechaVenta`|`DATE`        |               |Fecha en la que se puso en venta el producto      |
 
-- Tabla `VENDER`
+  - Tabla `PROVENIR`
+  
+  |Columna       |Tipo de datos |Restricción  |Descripción                                              |
+  |--------------|--------------|-------------|---------------------------------------------------------|
+  |`idProducto`  |`INT`         |`PK`, `FK`   |Clave primaria del producto que proviene de una provincia|
+  |`codProvincia`|`INT`         |`PK`, `FK`   |Clave primaria proveniente de la provincia del producto  |
+  
+  - Tabla `CATEGORIA`
 
-  |Columna    |Tipo de datos  |Restricción  |Descripción                      |
-  |-----------|---------------|-------------|---------------------------------|
-  |`cantidad` |`INT`          |             |cantidad de productos al venderse|
+  |Columna    |Tipo de datos  |Restricción  |Descripción                                          |
+  |-----------|---------------|-------------|-----------------------------------------------------|
+  |`ID`       |`INT`          |`PK`         |Clave primaria. código identificativo de la categoría|
+  |`Nombre`   |`VARCHAR(100)` |             |Nombre que "describe" el tipo de categoría a tratar  |
 
-- Tabla `TIENDA`
+  - Tabla `PERTENECER`
+  
+  |Columna       |Tipo de datos |Restricción  |Descripción                                              |
+  |--------------|--------------|-------------|---------------------------------------------------------|
+  |`idCategoria` |`INT`         |`PK`, `FK`   |Clave primaria del producto que pertenece a una categoria|
+  |`idProducto`  |`INT`         |`PK`, `FK`   |Clave primaria proveniente de la categoria del producto  |
+
+  - Tabla `TIENDA`
 
   |Columna    |Tipo de datos |Restricción    |Descripción                                                                                           |
   |-----------|--------------|---------------|------------------------------------------------------------------------------------------------------|
   |`CodTienda`    |`INT`         |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
   |`Dirección`    |`VARCHAR(200)`|           |Dirección de la tienda                                                                                |
-  |`Teléfono`     |`VARCHAR(9)`  |           |Teléfono de la tienda                                                                                 |
-  |`codProvincia` |`INT`         |`FK`       |                                                                                                      |
+  |`codProvincia` |`INT`         |`FK`       |Codigo de la provincia en la que se encuentra la tienda                                               |
   |`Cantidad`     |`VARCHAR(100)`|           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
+
+  - Tabla `TELEFONO`
+  
+  |Columna       |Tipo de datos |Restricción  |Descripción                                       |
+  |--------------|--------------|-------------|--------------------------------------------------|
+  |`numero `     |`INT`         |`PK`         |Clave primaria que identifica al telefono         |
+  |`idProducto`  |`INT`         |`FK`         |Codigo de la tienda a la que pertenece el teléfono|
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- Tabla `VENDER`
+
+  |Columna    |Tipo de datos  |Restricción  |Descripción                      |
+  |-----------|---------------|-------------|---------------------------------|
+  |`cantidad` |`INT`          |             |cantidad de productos al venderse|
 
 - Tabla `SALA`
 
