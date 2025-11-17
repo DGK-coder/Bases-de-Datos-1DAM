@@ -4,14 +4,14 @@
   |Columna    |Tipo de datos  |Restricción  |Descripción                                          |
   |-----------|---------------|-------------|-----------------------------------------------------|
   |`ID`       |`INT`          |`PK`         |Clave primaria. código identificativo de la categoría|
-  |`Nombre`   |`VARCHAR(100)` |`VNN`        |Nombre que "describe" el tipo de categoría a tratar  |
+  |`Nombre`   |`VARCHAR(100)` |             |Nombre que "describe" el tipo de categoría a tratar  |
 
 - Tabla `PROVINCIA`
 
   |Columna       |Tipo de datos  |Restricción  |Descripción                                          |
   |--------------|---------------|-------------|-----------------------------------------------------|
   |`CodProvincia`|`INT`          |`PK`         |Clave primaria. código identificativo de la provincia|
-  |`Nombre`      |`VARCHAR(100)` |`VNN`        |Nombre que ayuda a identificar la provincia          |
+  |`Nombre`      |`VARCHAR(100)` |             |Nombre que ayuda a identificar la provincia          |
 
 - Tabla `PRODUCTO`
 
