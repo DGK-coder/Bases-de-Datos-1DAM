@@ -63,7 +63,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 
   P.E: En las relaciones `PROVINCIA:PRODUCTO`, `CATEGORIA:PRODUCTO`, `PRODUCTO:DEPENDIENTE`, `SALA:LIMPIEZA`, `TIENDA:SALA` y `TIENDA:PERSONAL`, hay una perdida expresiva, ya que 1:N no es posible expresarlo en el modelo relacional.
 
-  P.E: El atributo Nombre de SALA es opcional y no puede xpresarse en el modelo relacional.	
+  P.E: El atributo Nombre de SALA es opcional y no puede expresarse en el modelo relacional.	
 
 			
 
