@@ -34,7 +34,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 	FK: (`idProducto`) --> *PRODUCTO*	  
         (`codTienda`) --> *TIENDA*	  
 
-- **SALA** (`num`, `codTienda*`, `nombre`, `metrosCua`)	
+- **SALA** (`num`, `codTienda*`, `nombre`, `metrosCua`)  
 	PK: (`num`, `codTienda`)	  
 	FK: (`codTienda`) --> *TIENDA*	  
 
@@ -52,11 +52,11 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 	FK: (`dniDependiente`) --> *DEPENDIENTE*  
 			(`idProducto`) --> *PRODUCTO*  
 
-- **LIMPIEZA** (`dniLimpieza*`)
+- **LIMPIEZA** (`dniLimpieza*`)  
 	PK: (`dniLimpieza`)  
 	FK: (`dniLimpieza`) --> *PERSONAL*  
 
-- **LIMPIAR** (`dniLimpieza*`, `numSala*`, `codTienda*`)
+- **LIMPIAR** (`dniLimpieza*`, `numSala*`, `codTienda*`)  
 	PK: (`dniLimpieza`, `numSala`, `codTienda`)  
 	FK: (`dniLimpieza`) --> *LIMPIEZA*  
 			(`numSala`, `codTienda`) --> *SALA*
