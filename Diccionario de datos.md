@@ -1,3 +1,4 @@
+## Tablas
 - Tabla `CATEGORIA`
 
   |Columna    |Tipo de datos  |Restricción  |Descripción                                          |
@@ -66,6 +67,7 @@
   |-----------|---------------|-------------|------------------------------------------|
   |`Tiempo`   |`INT`          |             |Número de días siendo enseñado o enseñando|
 
+## Restricciones
 - Clave primaria en CATEGORIA: ID
 - Clave primaria en PROVINCIA: CodProvincia
 - Clave primaria en PRODUCTO: ID
