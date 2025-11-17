@@ -23,7 +23,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 - **TIENDA** (`codTienda`, `direccion`, `codProvincia*`, `cantidad`)  
 	PK: (`codTienda`)  
 	FK: (`codProvincia`) --> *PROVINCIA*  
-	UK: (`codProvincia`)  
+  	VNN: (`codProvincia`)  
 
 - **TELEFONO** (`numero`, `codigo*`)  
 	PK: (`numero`)	  
