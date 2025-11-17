@@ -38,16 +38,16 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 	PK: (`num`, `codTienda`)	  
 	FK: (`codTienda`) --> *TIENDA*	  
 
-- **PERSONAL** (`dni`, `nombre`, `apellido1`, `apellido2`, `codTienda*`)	
+- **PERSONAL** (`dni`, `nombre`, `apellido1`, `apellido2`, `codTienda*`)  
 	PK: (`dni`)	  
-	FK: (`codTienda`) --> *TIENDA	*  
+	FK: (`codTienda`) --> *TIENDA*  
 
-- **DEPENDIENTE** (`dniDependiente*`, `corrIdent`, `dniEns*`, `tiempo`)    	
+- **DEPENDIENTE** (`dniDependiente*`, `corrIdent`, `dniEns*`, `tiempo`)  
 	PK: (`dniDependiente`)	  
 	FK: (`dniDependiente`) --> *PERSONAL*	  
 			(`dniEns`) --> *DEPENDIENTE*  
 			
-- **VENDER** (`dniDependiente*`, `idProducto*`, `cantidad`) 	
+- **VENDER** (`dniDependiente*`, `idProducto*`, `cantidad`)  
 	PK: (`dniDependiente`, `idProducto`)  
 	FK: (`dniDependiente`) --> *DEPENDIENTE*  
 			(`idProducto`) --> *PRODUCTO*  
