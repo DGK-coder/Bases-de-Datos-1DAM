@@ -29,7 +29,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 	PK: (`numero`)	  
 	FK: (`codigo`) --> *TIENDA*	  
  
-- **DISPONER** (`idProducto*`, `codTienda*`)	
+- **DISPONER** (`idProducto*`, `codTienda*`)	  
 	PK: (`idProducto`, `codTienda`)	  
 	FK: (`idProducto`) --> *PRODUCTO*	  
         (`codTienda`) --> *TIENDA*	  
