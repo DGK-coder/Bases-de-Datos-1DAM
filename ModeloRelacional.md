@@ -38,7 +38,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 	PK: (`num`, `codTienda`)	  
 	FK: (`codTienda`) --> *TIENDA*	  
 
-- **PERSONAL** (`dni`, `nombre`, `apellido1`, `apellido2``, `codTienda*`)  
+- **PERSONAL** (`dni`, `nombre`, `apellido1`, `apellido2`, `codTienda`*)  
 	PK: (`dni`)  
 	FK: (`codTienda`) --> *TIENDA*  
 
