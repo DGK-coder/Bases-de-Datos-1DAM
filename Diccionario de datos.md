@@ -31,10 +31,11 @@
 
   |Columna    |Tipo de datos |Restricción    |Descripción                                                                                           |
   |-----------|--------------|---------------|------------------------------------------------------------------------------------------------------|
-  |`CodTienda`|`INT`         |`PK`           |Clave primaria. número que identifica a la tienda                                                     |
-  |`Dirección`|`VARCHAR(200)`|               |Dirección de la tienda                                                                                |
-  |`Teléfono` |`VARCHAR(9)`  |               |Teléfono de la tienda                                                                                 |
-  |`Cantidad` |`VARCHAR(100)`|`FK`           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
+  |`CodTienda`    |`INT`         |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
+  |`Dirección`    |`VARCHAR(200)`|           |Dirección de la tienda                                                                                |
+  |`Teléfono`     |`VARCHAR(9)`  |           |Teléfono de la tienda                                                                                 |
+  |`codProvincia` |`INT`         |`FK`       |                                                                                                      |
+  |`Cantidad`     |`VARCHAR(100)`|           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
 
 - Tabla `SALA`
 
