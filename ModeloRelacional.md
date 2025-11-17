@@ -39,7 +39,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 	FK: (`codTienda`) --> *TIENDA*	  
 
 - **PERSONAL** (`dni`, `nombre`, `apellido1`, `apellido2``, `codTienda*`)  
-	PK: (`dni`)	  
+	PK: (`dni`)  
 	FK: (`codTienda`) --> *TIENDA*  
 
 - **DEPENDIENTE** (`dniDependiente*`, `corrIdent`, `dniEns*`, `tiempo`)  
