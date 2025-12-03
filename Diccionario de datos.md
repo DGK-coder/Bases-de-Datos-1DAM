@@ -39,7 +39,7 @@
 
   |Columna    |Tipo de datos |Restricción    |Descripción                                                                                           |
   |-----------|--------------|---------------|------------------------------------------------------------------------------------------------------|
-  |`codTienda`    |`INT`         |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
+  |`codTienda`    |`VARCHAR(10)` |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
   |`dirección`    |`VARCHAR(200)`|           |Dirección de la tienda                                                                                |
   |`codProvincia` |`VARCHAR(10)` |`FK`       |Codigo de la provincia en la que se encuentra la tienda proveniente de `PROVINCIA`                    |
   |`cantidad`     |`VARCHAR(100)`|           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
@@ -49,21 +49,21 @@
   |Columna       |Tipo de datos |Restricción  |Descripción                                                          |
   |--------------|--------------|-------------|---------------------------------------------------------------------|
   |`numero `     |`INT`         |`PK`         |Clave primaria que identifica al telefono                            |
-  |`codTienda`   |`INT`         |`FK`         |Codigo de la tienda a la que pertenece el teléfono, apunta a `TIENDA`|
+  |`codTienda`   |`VARCHAR(10)` |`FK`         |Codigo de la tienda a la que pertenece el teléfono, apunta a `TIENDA`|
 
   - Tabla `DISPONER`
   
   |Columna       |Tipo de datos |Restricción  |Descripción                                                                  |
   |--------------|--------------|-------------|-----------------------------------------------------------------------------|
   |`idProducto`  |`VARCHAR(10)` |`PK`, `FK`   |Clave primaria del producto que está en una tienda, apunta a `PRODUCTO`      |
-  |`codTienda`   |`INT`         |`PK`, `FK`   |Clave primaria de la tienda la cual dispone de un producto, apunta a `TIENDA`|
+  |`codTienda`   |`VARCHAR(10)` |`PK`, `FK`   |Clave primaria de la tienda la cual dispone de un producto, apunta a `TIENDA`|
 
   - Tabla `SALA`
 
   |Columna    |Tipo de datos |Restricción    |Descripción                                                                     |
   |-----------|--------------|---------------|--------------------------------------------------------------------------------|
   |`num`      |`INT`         |`PK`           |Clave primaria. número que identifica la sala de la tienda                      |
-  |`codTienda`|`INT`         |`PK` `FK`      |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA` |
+  |`codTienda`|`VARCHAR(10)` |`PK` `FK`      |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA` |
   |`metrosCua`|`INT`         |               |Metros cuadrados de la sala                                                     |
   |`nombre`   |`VARCHAR(100)`|               |Nombre de sala que ayuda a identificarla                                        |
 
@@ -75,7 +75,7 @@
   |`nombre`    |`VARCHAR(100)`|               |Nombre del personal                                                        |
   |`apellido1` |`VARCHAR(100)`|               |Primer apellido del personal                                               |
   |`apellido2` |`VARCHAR(100)`|               |Segundo apellido del personal                                              |
-  |`codTienda` |`INT`         |`FK`           |Código de la tienda en la que trabaja el personal, que proviene de `TIENDA`|
+  |`codTienda` |`VARCHAR(10)` |`FK`           |Código de la tienda en la que trabaja el personal, que proviene de `TIENDA`|
 
   - Tabla `DEPENDIENTE`
 
@@ -106,7 +106,7 @@
   |-------------|---------------|-------------|--------------------------------------------------------|
   |`dniLimpieza`|`CHAR(9)`      |`PK`, `FK`   |DNI del limpiador, proveniente de `PERSONAL`            |
   |`numSala`    |`INT`          |`PK`, `FK`   |Numero de la sala que es limpiada, proveniente de `SALA`|
-  |`codTienda`  |`INT`          |`PK`, `FK`   |Codigo de la tienda, proveniente de `SALA`              |
+  |`codTienda`  |`VARCHAR(10)`  |`PK`, `FK`   |Codigo de la tienda, proveniente de `SALA`              |
   
   - Tabla `ENSENYAR`
  
