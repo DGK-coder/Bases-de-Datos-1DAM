@@ -62,7 +62,7 @@
 
   |Columna    |Tipo de datos |Restricción    |Descripción                                                                     |
   |-----------|--------------|---------------|--------------------------------------------------------------------------------|
-  |`num`      |`INT`         |`PK`           |Clave primaria. número que identifica la sala de la tienda                      |
+  |`num`      |`VARCHAR(2)`  |`PK`           |Clave primaria. número que identifica la sala de la tienda                      |
   |`codTienda`|`VARCHAR(10)` |`PK` `FK`      |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA` |
   |`metrosCua`|`INT`         |               |Metros cuadrados de la sala                                                     |
   |`nombre`   |`VARCHAR(100)`|               |Nombre de sala que ayuda a identificarla                                        |
@@ -103,7 +103,7 @@
   |Columna      |Tipo de datos  |Restricción  |Descripción                                             |
   |-------------|---------------|-------------|--------------------------------------------------------|
   |`dniLimpieza`|`CHAR(9)`      |`PK`, `FK`   |DNI del limpiador, proveniente de `PERSONAL`            |
-  |`numSala`    |`INT`          |`PK`, `FK`   |Numero de la sala que es limpiada, proveniente de `SALA`|
+  |`numSala`    |`VARCHAR(2)`   |`PK`, `FK`   |Numero de la sala que es limpiada, proveniente de `SALA`|
   |`codTienda`  |`VARCHAR(10)`  |`PK`, `FK`   |Codigo de la tienda, proveniente de `SALA`              |
   
   - Tabla `ENSENYAR`
