@@ -63,7 +63,7 @@
   |Columna    |Tipo de datos |Restricción    |Descripción                                                                     |
   |-----------|--------------|---------------|--------------------------------------------------------------------------------|
   |`num`      |`INT`         |`PK`           |Clave primaria. número que identifica la sala de la tienda                      |
-  |`codTienda`|`INT`         |`PK` `FK`      |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA`|
+  |`codTienda`|`INT`         |`PK` `FK`      |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA` |
   |`metrosCua`|`INT`         |               |Metros cuadrados de la sala                                                     |
   |`nombre`   |`VARCHAR(100)`|               |Nombre de sala que ayuda a identificarla                                        |
 
@@ -107,6 +107,14 @@
   |`dniLimpieza`|`CHAR(9)`      |`PK`, `FK`   |DNI del limpiador, proveniente de `PERSONAL`            |
   |`numSala`    |`INT`          |`PK`, `FK`   |Numero de la sala que es limpiada, proveniente de `SALA`|
   |`codTienda`  |`INT`          |`PK`, `FK`   |Codigo de la tienda, proveniente de `SALA`              |
+  
+  - Tabla `ENSENYAR`
+ 
+  |Columna      |Tipo de datos  |Restricción  |Descripción                                                    |
+  |-------------|---------------|-------------|---------------------------------------------------------------|
+  |`dniEns`     |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiendote que enseña, proveniente de `DEPENDIENTE` |
+  |`dniApr`     |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiendote que aprende, proveniente de `DEPENDIENTE`|
+  |`tiempo`     |`DATE`         |             |Fecha en la que empezó la enseñanza                            |
 
 ## Restricciones
 ### PK
@@ -124,6 +132,7 @@
 - Clave primaria en `VENDER`: `dniDependiente`, `idProducto`
 - Clave primaria en `LIMPIEZA`: `dniLimpieza`
 - Clave primaria en `LIMPIAR`: `dniLimpieza`, `numSala`, `codTienda`
+- Clave primaria en `ENSENYAR`: `dniEns`. `dniApr`
 ### FK
 - Clave ajena en `PROVENIR`: `idProducto` referencia a `id` en la tabla `PRODUCTO`, indicando el producto que proviene de una provincia.
   - Restricción de borrado: propagar
@@ -177,5 +186,11 @@
   - Restricción de borrado: propagar
   - Restricción de modificación: propagar
 - Clave ajena en `LIMPIAR`: `codTienda` referencia a `codTienda` en la tabla `TIENDA`, indicando la tienda de la sala que es limpiada.
+  - Restricción de borrado: propagar
+  - Restricción de modificación: propagar
+- Clave ajena en `ENSENYAR`: `dniEns` referencia a `dniDependiente` en la tabla `DEPENDIENTE`, indicando el dependiente que enseña.
+  - Restricción de borrado: propagar
+  - Restricción de modificación: propagar
+- Clave ajena en `ENSENYAR`: `dniApr` referencia a `dniDependiente` en la tabla `DEPENDIENTE`, indicando el dependiente que aprende.
   - Restricción de borrado: propagar
   - Restricción de modificación: propagar
