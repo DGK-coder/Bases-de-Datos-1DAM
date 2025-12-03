@@ -83,8 +83,6 @@
   |-----------------|---------------|-------------|------------------------------------------------------------|
   |`dniDependiente` |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiendote, proveniente de `PERSONAL`            |
   |`corrIdent`      |`VARCHAR(100)` |             |Correo con el que puede identificarse en la empresa         |
-  |`dniEns`         |`CHAR(9)`      |`FK`         |DNI del dependiente que le enseña, proveniente de `PERSONAL`|
-  |`tiempo`         |`VARCHAR(100)` |             |Cuanto tiempo lleva siendo enseñado por el otro dependiente |
 
   - Tabla `VENDER`
 
@@ -194,3 +192,7 @@
 - Clave ajena en `ENSENYAR`: `dniApr` referencia a `dniDependiente` en la tabla `DEPENDIENTE`, indicando el dependiente que aprende.
   - Restricción de borrado: propagar
   - Restricción de modificación: propagar
+ 
+  A COMPROBAR
+  |`dniEns`         |`CHAR(9)`      |`FK`         |DNI del dependiente que le enseña, proveniente de `PERSONAL`|
+  |`tiempo`         |`VARCHAR(100)` |             |Cuanto tiempo lleva siendo enseñado por el otro dependiente |
