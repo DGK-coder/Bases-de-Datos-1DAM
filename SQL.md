@@ -1,14 +1,14 @@
 # COMANDOS PARA MARIADB
 ## CREAR BASE DE DATOS Y USARLA
-```bash
+```sql
 CREATE DATABASE TiendasDeVideojuegos;
 ```
-```bash
+```sql
 use TiendasDeVideojuegos;
 ```
 ## CREACIÓN DE TABLAS
 ### TABLA `PROVINCIA`
-```bash
+```sql
 CREATE TABLE PROVINCIA(
     codProvincia VARCHAR(10),
     nombre VARCHAR(100),
@@ -16,7 +16,7 @@ CREATE TABLE PROVINCIA(
 );
 ```
 ### TABLA `PRODUCTO`
-```bash
+```sql
 CREATE TABLE PRODUCTO(
     id VARCHAR(10),
     stock INT,
@@ -25,7 +25,7 @@ CREATE TABLE PRODUCTO(
 );
 ```
 ### TABLA `PROVENIR`
-```bash
+```sql
 CREATE TABLE PROVENIR(
     idProducto VARCHAR(10),
     codProvincia VARCHAR(10),
@@ -39,7 +39,7 @@ CREATE TABLE PROVENIR(
 );
 ```
 ### TABLA `CATEGORIA`
-```bash
+```sql
 CREATE TABLE CATEGORIA(
     id VARCHAR(10),
     nombre VARCHAR(100),
@@ -47,7 +47,7 @@ CREATE TABLE CATEGORIA(
 );
 ```
 ### TABLA `PERTENECER`
-```bash
+```sql
 CREATE TABLE PERTENECER(
     idCategoria VARCHAR(10),
     idProducto VARCHAR(10),
@@ -61,7 +61,7 @@ CREATE TABLE PERTENECER(
 );
 ```
 ### TABLA `TIENDA`
-```bash
+```sql
 CREATE TABLE TIENDA(
     codTienda VARCHAR(10),
     direccion VARCHAR(200),
@@ -74,7 +74,7 @@ CREATE TABLE TIENDA(
 );
 ```
 ### TABLA `TELEFONO`
-```bash
+```sql
 CREATE TABLE TELEFONO(
     numero INT,
     codTienda VARCHAR(10),
@@ -85,7 +85,7 @@ CREATE TABLE TELEFONO(
 );
 ```
 ### TABLA `DISPONER`
-```bash
+```sql
 CREATE TABLE DISPONER(
     idProducto VARCHAR(10),
     codTienda VARCHAR(10),
@@ -99,7 +99,7 @@ CREATE TABLE DISPONER(
 );
 ```
 ### TABLA `SALA`
-```bash
+```sql
 CREATE TABLE SALA(
     num VARCHAR(2),
     codTienda VARCHAR(10),
@@ -112,7 +112,7 @@ CREATE TABLE SALA(
 );
 ```
 ### TABLA `PERSONAL`
-```bash
+```sql
 CREATE TABLE PERSONAL(
     dni CHAR(9),
     nombre VARCHAR(100),
@@ -126,7 +126,7 @@ CREATE TABLE PERSONAL(
 );
 ```
 ### TABLA `DEPENDIENTE`
-```bash
+```sql
 CREATE TABLE DEPENDIENTE(
     dniDependiente CHAR(9),
     corrIdent VARCHAR(100),
@@ -137,7 +137,7 @@ CREATE TABLE DEPENDIENTE(
 );
 ```
 ### TABLA `VENDER`
-```bash
+```sql
 CREATE TABLE VENDER(
     dniDependiente CHAR(9),
     idProducto VARCHAR(10),
@@ -152,7 +152,7 @@ CREATE TABLE VENDER(
 );
 ```
 ### TABLA `LIMPIEZA`
-```bash
+```sql
 CREATE TABLE LIMPIEZA(
     dniLimpieza CHAR(9),
     CONSTRAINT PK_LIMPIEZA PRIMARY KEY (dniLimpieza),
@@ -162,7 +162,7 @@ CREATE TABLE LIMPIEZA(
 );
 ```
 ### TABLA `LIMPIAR`
-```bash
+```sql
 CREATE TABLE LIMPIAR(
     dniLimpieza CHAR(9),
     numSala VARCHAR(2),
@@ -180,7 +180,7 @@ CREATE TABLE LIMPIAR(
 );
 ```
 ### TABLA `ENSENYAR`
-```bash
+```sql
 CREATE TABLE ENSENYAR(
     dniEns CHAR(9),
     dniApr CHAR(9),
