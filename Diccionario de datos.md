@@ -3,7 +3,7 @@
 
   |Columna       |Tipo de datos  |Restricción  |Descripción                                          |
   |--------------|---------------|-------------|-----------------------------------------------------|
-  |`codProvincia`|`VARCHAR(10)`  |`PK`         |Clave primaria. código identificativo de la provincia|
+  |`codProvincia`|`CHAR(36)`     |`PK`         |Clave primaria. código identificativo de la provincia|
   |`nombre`      |`VARCHAR(100)` |             |Nombre que ayuda a identificar la provincia          |
 
   - Tabla `PRODUCTO`
@@ -18,52 +18,52 @@
   
   |Columna       |Tipo de datos |Restricción  |Descripción                                                                   |
   |--------------|--------------|-------------|------------------------------------------------------------------------------|
-  |`idProducto`  |`VARCHAR(10)` |`PK`, `FK`   |Clave primaria del producto que proviene de una provincia, apunta a `PRODUCTO`|
-  |`codProvincia`|`VARCHAR(10)` |`PK`, `FK`   |Clave primaria proveniente de la provincia del producto, apunta a `PROVINCIA` |
+  |`idProducto`  |`INT`         |`PK`, `FK`   |Clave primaria del producto que proviene de una provincia, apunta a `PRODUCTO`|
+  |`codProvincia`|`CHAR(36)`    |`PK`, `FK`   |Clave primaria proveniente de la provincia del producto, apunta a `PROVINCIA` |
   
   - Tabla `CATEGORIA`
 
   |Columna    |Tipo de datos  |Restricción  |Descripción                                          |
   |-----------|---------------|-------------|-----------------------------------------------------|
-  |`id`       |`VARCHAR(10)`  |`PK`         |Clave primaria. código identificativo de la categoría|
+  |`id`       |`INT`          |`PK`         |Clave primaria. código identificativo de la categoría|
   |`nombre`   |`VARCHAR(100)` |             |Nombre que "describe" el tipo de categoría a tratar  |
 
   - Tabla `PERTENECER`
   
   |Columna       |Tipo de datos |Restricción  |Descripción                                                                    |
   |--------------|--------------|-------------|-------------------------------------------------------------------------------|
-  |`idCategoria` |`VARCHAR(10)` |`PK`, `FK`   |Clave primaria del producto que pertenece a una categoria, apunta a `CATEGORIA`|
-  |`idProducto`  |`VARCHAR(10)` |`PK`, `FK`   |Clave primaria proveniente de la categoria del producto, apunta a `PRODUCTO`   |
+  |`idCategoria` |`INT`         |`PK`, `FK`   |Clave primaria del producto que pertenece a una categoria, apunta a `CATEGORIA`|
+  |`idProducto`  |`INT`         |`PK`, `FK`   |Clave primaria proveniente de la categoria del producto, apunta a `PRODUCTO`   |
 
   - Tabla `TIENDA`
 
-  |Columna    |Tipo de datos |Restricción    |Descripción                                                                                           |
-  |-----------|--------------|---------------|------------------------------------------------------------------------------------------------------|
-  |`codTienda`    |`VARCHAR(10)` |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
+  |Columna        |Tipo de datos |Restricción|Descripción                                                                                           |
+  |---------------|--------------|-----------|------------------------------------------------------------------------------------------------------|
+  |`codTienda`    |`INT`    |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
   |`dirección`    |`VARCHAR(200)`|           |Dirección de la tienda                                                                                |
-  |`codProvincia` |`VARCHAR(10)` |`FK`       |Codigo de la provincia en la que se encuentra la tienda proveniente de `PROVINCIA`                    |
+  |`codProvincia` |`CHAR(36)`    |`FK`       |Codigo de la provincia en la que se encuentra la tienda proveniente de `PROVINCIA`                    |
   |`cantidad`     |`VARCHAR(100)`|           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
 
   - Tabla `TELEFONO`
   
   |Columna       |Tipo de datos |Restricción  |Descripción                                                          |
   |--------------|--------------|-------------|---------------------------------------------------------------------|
-  |`numero `     |`INT`         |`PK`         |Clave primaria que identifica al telefono                            |
-  |`codTienda`   |`VARCHAR(10)` |`FK`         |Codigo de la tienda a la que pertenece el teléfono, apunta a `TIENDA`|
+  |`numero `     |`CHAR(9)`         |`PK`         |Clave primaria que identifica al telefono                            |
+  |`codTienda`   |`CHAR(36)`    |`FK`         |Codigo de la tienda a la que pertenece el teléfono, apunta a `TIENDA`|
 
   - Tabla `DISPONER`
   
   |Columna       |Tipo de datos |Restricción  |Descripción                                                                  |
   |--------------|--------------|-------------|-----------------------------------------------------------------------------|
-  |`idProducto`  |`VARCHAR(10)` |`PK`, `FK`   |Clave primaria del producto que está en una tienda, apunta a `PRODUCTO`      |
-  |`codTienda`   |`VARCHAR(10)` |`PK`, `FK`   |Clave primaria de la tienda la cual dispone de un producto, apunta a `TIENDA`|
+  |`idProducto`  |`INT`         |`PK`, `FK`   |Clave primaria del producto que está en una tienda, apunta a `PRODUCTO`      |
+  |`codTienda`   |`CHAR(36)`    |`PK`, `FK`   |Clave primaria de la tienda la cual dispone de un producto, apunta a `TIENDA`|
 
   - Tabla `SALA`
 
   |Columna    |Tipo de datos |Restricción    |Descripción                                                                     |
   |-----------|--------------|---------------|--------------------------------------------------------------------------------|
   |`num`      |`VARCHAR(2)`  |`PK`           |Clave primaria. número que identifica la sala de la tienda                      |
-  |`codTienda`|`VARCHAR(10)` |`PK` `FK`      |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA` |
+  |`codTienda`|`CHAR(36)`    |`PK` `FK`      |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA` |
   |`metrosCua`|`INT`         |               |Metros cuadrados de la sala                                                     |
   |`nombre`   |`VARCHAR(100)`|               |Nombre de sala que ayuda a identificarla                                        |
 
@@ -75,7 +75,7 @@
   |`nombre`    |`VARCHAR(100)`|               |Nombre del personal                                                        |
   |`apellido1` |`VARCHAR(100)`|               |Primer apellido del personal                                               |
   |`apellido2` |`VARCHAR(100)`|               |Segundo apellido del personal                                              |
-  |`codTienda` |`VARCHAR(10)` |`FK`           |Código de la tienda en la que trabaja el personal, que proviene de `TIENDA`|
+  |`codTienda` |`CHAR(36)`    |`FK`           |Código de la tienda en la que trabaja el personal, que proviene de `TIENDA`|
 
   - Tabla `DEPENDIENTE`
 
@@ -84,12 +84,20 @@
   |`dniDependiente` |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiendote, proveniente de `PERSONAL`            |
   |`corrIdent`      |`VARCHAR(100)` |             |Correo con el que puede identificarse en la empresa         |
 
+  - Tabla `ENSENYAR`
+ 
+  |Columna      |Tipo de datos  |Restricción  |Descripción                                                    |
+  |-------------|---------------|-------------|---------------------------------------------------------------|
+  |`dniEns`     |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiendote que enseña, proveniente de `DEPENDIENTE` |
+  |`dniApr`     |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiendote que aprende, proveniente de `DEPENDIENTE`|
+  |`tiempo`     |`DATE`         |             |Fecha en la que empezó la enseñanza                            |
+  
   - Tabla `VENDER`
 
   |Columna          |Tipo de datos  |Restricción  |Descripción                                                        |
   |-----------------|---------------|-------------|-------------------------------------------------------------------|
   |`dniDependiente` |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiente, proveniente de `PERSONAL`                     |
-  |`idProducto`     |`VARCHAR(10)`  |`PK`, `FK`   |id del producto que el dependiente vende, proveniente de `PERSONAL`|
+  |`idProducto`     |`INT`          |`PK`, `FK`   |id del producto que el dependiente vende, proveniente de `PERSONAL`|
   |`cantidad`       |`INT`          |             |Cantidad del producto que el dependiente vende                     |
 
   - Tabla `LIMPIEZA`
@@ -103,16 +111,8 @@
   |Columna      |Tipo de datos  |Restricción  |Descripción                                             |
   |-------------|---------------|-------------|--------------------------------------------------------|
   |`dniLimpieza`|`CHAR(9)`      |`PK`, `FK`   |DNI del limpiador, proveniente de `PERSONAL`            |
-  |`numSala`    |`VARCHAR(2)`   |`PK`, `FK`   |Numero de la sala que es limpiada, proveniente de `SALA`|
-  |`codTienda`  |`VARCHAR(10)`  |`PK`, `FK`   |Codigo de la tienda, proveniente de `SALA`              |
-  
-  - Tabla `ENSENYAR`
- 
-  |Columna      |Tipo de datos  |Restricción  |Descripción                                                    |
-  |-------------|---------------|-------------|---------------------------------------------------------------|
-  |`dniEns`     |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiendote que enseña, proveniente de `DEPENDIENTE` |
-  |`dniApr`     |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiendote que aprende, proveniente de `DEPENDIENTE`|
-  |`tiempo`     |`DATE`         |             |Fecha en la que empezó la enseñanza                            |
+  |`numSala`    |`INT`   |`PK`, `FK`   |Numero de la sala que es limpiada, proveniente de `SALA`|
+  |`codTienda`  |`CHAR(36)`     |`PK`, `FK`   |Codigo de la tienda, proveniente de `SALA`              |
 
 ## Restricciones
 ### PK
@@ -192,7 +192,3 @@
 - Clave ajena en `ENSENYAR`: `dniApr` referencia a `dniDependiente` en la tabla `DEPENDIENTE`, indicando el dependiente que aprende.
   - Restricción de borrado: propagar
   - Restricción de modificación: propagar
- 
-  A COMPROBAR
-  |`dniEns`         |`CHAR(9)`      |`FK`         |DNI del dependiente que le enseña, proveniente de `PERSONAL`|
-  |`tiempo`         |`VARCHAR(100)` |             |Cuanto tiempo lleva siendo enseñado por el otro dependiente |
