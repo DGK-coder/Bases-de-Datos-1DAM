@@ -42,7 +42,7 @@
   |`codTienda`    |`VARCHAR(10)` |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
   |`dirección`    |`VARCHAR(200)`|           |Dirección de la tienda                                                                                |
   |`codProvincia` |`VARCHAR(10)` |`FK`       |Codigo de la provincia en la que se encuentra la tienda proveniente de `PROVINCIA`                    |
-  |`cantidad`     |`VARCHAR(100)`|           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
+  |`cantidad`     |`INT`|           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
 
   - Tabla `TELEFONO`
   
