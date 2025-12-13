@@ -152,9 +152,9 @@ INSERT INTO DEPENDIENTE (dniDependiente, corrIdent) VALUES
   ('00000000J','emp10@tienda.com');
 ```
 
-### TABLA `ENSEYAR`
+### TABLA `ENSENYAR`
 ```sql
-INSET INTO ENSENYAT (dniEns, dniApr, tiempo) VALUES
+INSET INTO ENSENYAR (dniEns, dniApr, tiempo) VALUES
   ('11111111A','22222222B','2023-01-01'),
   ('22222222B','33333333C','2023-01-02'),
   ('33333333C','44444444D','2023-01-08'),
