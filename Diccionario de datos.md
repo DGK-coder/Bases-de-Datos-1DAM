@@ -139,7 +139,7 @@
   - Restricción de borrado: rechazar
   - Restricción de modificación: propagar
 - Clave ajena en `PERTENECER`: `idCategoria` referencia a `id` en la tabla `CATEGORIA`, indicando la categoria a la que pertenece un producto.
-  - Restricción de borrado: anular
+  - Restricción de borrado: propagar
   - Restricción de modificación: propagar
 - Clave ajena en `PERTENECER`: `idProducto` referencia a `id` en la tabla `PRODUCTO`, indicando el producto que pertenece una categoria.
   - Restricción de borrado: propagar
@@ -166,10 +166,10 @@
   - Restricción de borrado: propagar
   - Restricción de modificación: propagar
 - Clave ajena en `DEPENDIENTE`: `dniEns` referencia a `dni` en la tabla `PERSONAL`, indicando el dni del dependiente que enseña a otro.
-  - Restricción de borrado: anular
+  - Restricción de borrado: propagar
   - Restricción de modificación: propagar
 - Clave ajena en `VENDER`: `dniDependiente` referencia a `dniDependiente` en la tabla `DEPENDIENTE`, indicando el empleado que vende un producto.
-  - Restricción de borrado: anular
+  - Restricción de borrado: propagar
   - Restricción de modificación: propagar
 - Clave ajena en `VENDER`: `idProducto` referencia a `id` en la tabla `PRODUCTO`, indicando el producto que es vendido por un empleado.
   - Restricción de borrado: propagar
