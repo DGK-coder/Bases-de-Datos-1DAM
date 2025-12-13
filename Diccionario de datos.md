@@ -10,7 +10,7 @@
 
   |Columna     |Tipo de datos |Restricción    |Descripción                                       |
   |------------|--------------|---------------|--------------------------------------------------|
-  |`id`        |`VARCHAR(10)` |`PK`           |Clave primaria. código identificativo del producto|
+  |`id`        |`INT`         |`PK`           |Clave primaria. código identificativo del producto|
   |`stock`     |`INT`         |               |Cantidad de producto en stock                     |
   |`fechaVenta`|`DATE`        |               |Fecha en la que se puso en venta el producto      |
 
@@ -39,7 +39,7 @@
 
   |Columna        |Tipo de datos |Restricción|Descripción                                                                                           |
   |---------------|--------------|-----------|------------------------------------------------------------------------------------------------------|
-  |`codTienda`    |`INT`    |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
+  |`codTienda`    |`INT`         |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
   |`dirección`    |`VARCHAR(200)`|           |Dirección de la tienda                                                                                |
   |`codProvincia` |`CHAR(36)`    |`FK`       |Codigo de la provincia en la que se encuentra la tienda proveniente de `PROVINCIA`                    |
   |`cantidad`     |`VARCHAR(100)`|           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
@@ -48,7 +48,7 @@
   
   |Columna       |Tipo de datos |Restricción  |Descripción                                                          |
   |--------------|--------------|-------------|---------------------------------------------------------------------|
-  |`numero `     |`CHAR(9)`         |`PK`         |Clave primaria que identifica al telefono                            |
+  |`numero `     |`CHAR(9)`     |`PK`         |Clave primaria que identifica al telefono                            |
   |`codTienda`   |`CHAR(36)`    |`FK`         |Codigo de la tienda a la que pertenece el teléfono, apunta a `TIENDA`|
 
   - Tabla `DISPONER`
@@ -111,7 +111,7 @@
   |Columna      |Tipo de datos  |Restricción  |Descripción                                             |
   |-------------|---------------|-------------|--------------------------------------------------------|
   |`dniLimpieza`|`CHAR(9)`      |`PK`, `FK`   |DNI del limpiador, proveniente de `PERSONAL`            |
-  |`numSala`    |`INT`   |`PK`, `FK`   |Numero de la sala que es limpiada, proveniente de `SALA`|
+  |`numSala`    |`INT`          |`PK`, `FK`   |Numero de la sala que es limpiada, proveniente de `SALA`|
   |`codTienda`  |`CHAR(36)`     |`PK`, `FK`   |Codigo de la tienda, proveniente de `SALA`              |
 
 ## Restricciones
