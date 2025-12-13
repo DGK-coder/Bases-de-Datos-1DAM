@@ -82,7 +82,7 @@ INSERT INTO TIENDA (codTienda, direccion, codProvincia, cantidad) VALUES
   ('t7','Calle G', '77777777-7777-7777-7777-777777777777',9),
   ('t8','Calle H', '88888888-8888-8888-8888-888888888888',NULL),
   ('t9','Calle I', '99999999-9999-9999-9999-999999999999',14),
-  ('t10',NULL','aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',16);
+  ('t10',NULL,'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',16);
 ```
 
 ### TABLA `TELEFONO`
