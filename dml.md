@@ -124,7 +124,7 @@ INSERT INTO SALA (codTienda, metrosCua, nombre) VALUES
 
 ### TABLA `PERSONAL`
 ```sql
-INSERT INTO PERSONAR (dni, nombre, apellido1, apellido2, codTienda) VALUES
+INSERT INTO PERSONAL (dni, nombre, apellido1, apellido2, codTienda) VALUES
   ('11111111A','Juan','Pérez',NULL,'t1'),
   ('22222222B','Ana','García','Ruiz','t2'),
   ('33333333C','Luis','Martín','Soto','t3'),
