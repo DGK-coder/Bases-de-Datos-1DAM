@@ -178,7 +178,7 @@
   - Restricción de borrado: propagar
   - Restricción de modificación: propagar
 - Clave ajena en `LIMPIAR`: `dniLimpieza` referencia a `dniLimpieza` en `LIMPIEZA`, indicando el personal que limpia una sala.
-  - Restricción de borrado: anular
+  - Restricción de borrado: propagar
   - Restricción de modificación: propagar
 - Clave ajena en `LIMPIAR`: `numSala` referencia a `num` en `SALA`, indicando la sala que es limpiada.
   - Restricción de borrado: propagar
