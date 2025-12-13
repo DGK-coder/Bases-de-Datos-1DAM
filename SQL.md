@@ -155,7 +155,7 @@ CREATE TABLE ENSENYAR(
 ```sql
 CREATE TABLE VENDER(
     dniDependiente CHAR(9),
-    idProducto CHAR(36),
+    idProducto INT,
     cantidad INT,
     CONSTRAINT PK_VENDER PRIMARY KEY (dniDependiente, idProducto),
     CONSTRAINT FK_VENDER_DEPENDIENTE FOREIGN KEY (dniDependiente) REFERENCES DEPENDIENTE(dniDependiente)
