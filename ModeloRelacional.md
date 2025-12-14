@@ -46,8 +46,8 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 	PK: (`dniDependiente`)	  
 	FK: (`dniDependiente`) --> *PERSONAL*
 
-- **ENSENYAR** (`dniEns*`, `dniApr*`,`tiempo`)
-  	PK: (`dniEns`, `dniApr`)
+- **ENSENYAR** (`dniEns*`, `dniApr*`,`tiempo`)  
+  	PK: (`dniEns`, `dniApr`)  
   	FK: (`dniEns`,`dniApr`) --> *DEPENDIENTE*  
 			
 - **VENDER** (`dniDependiente*`, `idProducto*`, `cantidad`)  
