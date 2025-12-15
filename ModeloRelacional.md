@@ -3,6 +3,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 
 - **PROVINCIA** (`codProvincia`, `nombre`)  
 	PK: (`codProvincia`)
+	VNN: (`nombre`)
 
 - **PRODUCTO** (`id`, `stock`, `fechaVenta`,`compra`,`venta`,`beneficio`)  
 	PK: (`id`)
@@ -14,6 +15,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 
 - **CATEGORIA** (`id`, `nombre`)  
 	PK: (`id`)
+	VNN: (`nombre`)
 
 - **PERTENECER** (`idCategoria*`, `idProducto*`)  
 	PK: (`idCategoria`, `idProducto`)  
@@ -23,7 +25,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 - **TIENDA** (`codTienda`, `direccion`, `codProvincia*`, `cantidad`)  
 	PK: (`codTienda`)  
 	FK: (`codProvincia`) --> *PROVINCIA*  
-  	VNN: (`codProvincia`)  
+  	VNN: (`codProvincia`)
 
 - **TELEFONO** (`numero`, `codigo*`)  
 	PK: (`numero`)	  
@@ -36,11 +38,15 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 
 - **SALA** (`num`, `codTienda*`, `nombre`, `metrosCua`)  
 	PK: (`num`, `codTienda`)	  
-	FK: (`codTienda`) --> *TIENDA*	  
+	FK: (`codTienda`) --> *TIENDA*
+	VNN: (`nombre`)
+	UK: (`nombre`)
 
 - **PERSONAL** (`dni`, `nombre`, `apellido1`, `apellido2`, `codTienda`*,`fecha_nac`,`edad`)  
 	PK: (`dni`)  
-	FK: (`codTienda`) --> *TIENDA*  
+	FK: (`codTienda`) --> *TIENDA*
+	VNN: (`nombre`)
+	VNN: (`apellido1`)
 
 - **DEPENDIENTE** (`dniDependiente*`, `corrIdent`)  
 	PK: (`dniDependiente`)	  
