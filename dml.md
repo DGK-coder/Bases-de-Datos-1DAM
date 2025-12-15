@@ -25,11 +25,11 @@ INSERT INTO PRODUCTO (nombre, stock, fechaVenta, compra, venta) VALUES
   ('The Legend of Zelda: Tears of the Kingdom', 50, '2024-01-10', 10.00, 15.00),
   ('God of War Ragnarök', NULL, '2024-01-11', 8.50, 12.00),
   ('Elden Ring', 35, '2024-01-12', 5.00, 9.50),
-  ('Call of Duty: Modern Warfare III', 60, '2024-01-13', 20.00, 27.50),
+  ('Call of Duty: Modern Warfare III', 60, '2024-01-13', 10.00, 15.00),
   ('FIFA 24', NULL, '2024-01-14', 12.00, 18.00),
-  ('Minecraft', 80, '2024-01-15', 7.25, 11.00),
+  ('Minecraft', 35, '2024-01-13', 10.00, 11.00),
   ('Hollow Knight', 10, '2024-01-16', 9.00, 14.00),
-  ('Cyberpunk 2077', 25, '2024-01-17', 25.00, 32.00),
+  ('Cyberpunk 2077', 50, '2024-01-14', 25.00, 15.00),
   ('Stardew Valley', 40, NULL, 6.00, 10.00),
   ('Resident Evil 4 Remake', 55, '2024-01-19', 11.50, 16.50);
 ```
@@ -98,12 +98,12 @@ INSERT INTO TIENDA (direccion, codProvincia, cantidad) VALUES
 INSERT INTO TELEFONO (numero, codTienda) VALUES
   ('600000001',(SELECT codTienda FROM TIENDA WHERE direccion='Calle A')),
   ('600000002',(SELECT codTienda FROM TIENDA WHERE direccion='Calle B')),
-  ('600000003',(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
+  (NULL,(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
   ('600000004',(SELECT codTienda FROM TIENDA WHERE direccion='Calle D')),
   ('600000005',(SELECT codTienda FROM TIENDA WHERE direccion='Calle E')),
   ('600000005',(SELECT codTienda FROM TIENDA WHERE direccion='Calle F')),
   ('600000007',(SELECT codTienda FROM TIENDA WHERE direccion='Calle G')),
-  ('600000008',(SELECT codTienda FROM TIENDA WHERE direccion='Calle H')),
+  (NULL,(SELECT codTienda FROM TIENDA WHERE direccion='Calle H')),
   ('600000008',(SELECT codTienda FROM TIENDA WHERE direccion='Calle I')),
   ('600000010',(SELECT codTienda FROM TIENDA WHERE direccion='Calle J'));
 ```
@@ -132,9 +132,9 @@ INSERT INTO SALA (codTienda, metrosCua, nombre) VALUES
   ((SELECT codTienda FROM TIENDA WHERE direccion='Calle C'),70, NULL),
   ((SELECT codTienda FROM TIENDA WHERE direccion='Calle D'),55,'Sala E'),
   ((SELECT codTienda FROM TIENDA WHERE direccion='Calle E'),65,'Sala F'),
-  ((SELECT codTienda FROM TIENDA WHERE direccion='Calle F'),40,'Sala G'),
+  ((SELECT codTienda FROM TIENDA WHERE direccion='Calle F'),55,'Sala G'),
   ((SELECT codTienda FROM TIENDA WHERE direccion='Calle G'),48, NULL),
-  ((SELECT codTienda FROM TIENDA WHERE direccion='Calle H'),58,'Sala I'),
+  ((SELECT codTienda FROM TIENDA WHERE direccion='Calle H'),65,'Sala I'),
   ((SELECT codTienda FROM TIENDA WHERE direccion='Calle I'),NULL,'Sala J');
 ```
 
@@ -147,20 +147,20 @@ INSERT INTO PERSONAL (dni, nombre, apellido1, apellido2, codTienda, fecha_nac) V
   ('44444444D','Marta','Díaz','Gil',(SELECT codTienda FROM TIENDA WHERE direccion='Calle D'), '1992-11-15'),
   ('55555555E','Carlos','Vega','Mora',(SELECT codTienda FROM TIENDA WHERE direccion='Calle E'), '1985-01-30'),
   ('66666666F','Laura','Navarro','Cruz',(SELECT codTienda FROM TIENDA WHERE direccion='Calle F'), '1998-07-04'),
-  ('77777777G','Pablo','Ortega','León',(SELECT codTienda FROM TIENDA WHERE direccion='Calle G'), '1991-12-22'),
+  ('77777777G','Pablo','Pérez','León',(SELECT codTienda FROM TIENDA WHERE direccion='Calle G'), '1991-12-22'),
   ('88888888H','Sara','Romero',NULL,(SELECT codTienda FROM TIENDA WHERE direccion='Calle H'), '1996-04-18'),
-  ('99999999I','Luis','Torres','Blanco',(SELECT codTienda FROM TIENDA WHERE direccion='Calle I'), '1989-06-10'),
+  ('99999999I','Luis','Torres','Soto',(SELECT codTienda FROM TIENDA WHERE direccion='Calle I'), '1988-09-20'),
   ('00000000J','Elena','Ramos','Serrano',(SELECT codTienda FROM TIENDA WHERE direccion='Calle J'), '1988-09-20');
 ```
 
 ### TABLA `DEPENDIENTE`
 ```sql
 INSERT INTO DEPENDIENTE (dniDependiente, corrIdent) VALUES
-  ('66666666F','emp6@tienda.com'),
-  ('77777777G',NULL),
-  ('88888888H','emp8@tienda.com'),
-  ('99999999I','emp9@tienda.com'),
-  ('00000000J','emp10@tienda.com');
+  ((SELECT dni FROM PERSONAL WHERE nombre='Laura' AND apellido1='Navarro'),'emp6@tienda.com'),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Pablo' AND apellido1='Pérez'),'emp7@tienda.com'),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Sara' AND apellido1='Romero'),'emp8@tienda.com'),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),'emp9@tienda.com'),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),'emp10@tienda.com');
 ```
 
 ### TABLA `ENSENYAR`
@@ -196,11 +196,11 @@ INSERT INTO VENDER (dniDependiente, idProducto, cantidad) VALUES
 ### TABLA `LIMPIEZA`
 ```sql
 INSERT INTO LIMPIEZA (dniLimpieza) VALUES
-  ('11111111A'),
-  ('22222222B'),
-  ('33333333C'),
-  ('44444444D'),
-  ('55555555E');
+  (SELECT dni FROM PERSONAL WHERE nombre='Juan' AND apellido1='Pérez'),
+  (SELECT dni FROM PERSONAL WHERE nombre='Ana' AND apellido1='García'),
+  (SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Martín'),
+  (SELECT dni FROM PERSONAL WHERE nombre='Marta' AND apellido1='Díaz'),
+  (SELECT dni FROM PERSONAL WHERE nombre='Carlos' AND apellido1='Vega');
 ```
 
 ### TABLA `LIMPIAR`
