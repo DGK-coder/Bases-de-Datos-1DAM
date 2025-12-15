@@ -4,7 +4,7 @@
   |Columna       |Tipo de datos  |Restricción  |Descripción                                          |
   |--------------|---------------|-------------|-----------------------------------------------------|
   |`codProvincia`|`CHAR(36)`     |`PK`         |Clave primaria. código identificativo de la provincia|
-  |`nombre`      |`VARCHAR(100)` |`VNN`        |Nombre que ayuda a identificar la provincia          |
+  |`nombre`      |`VARCHAR(100)` |`VNN`   `UK` |Nombre que ayuda a identificar la provincia          |
 
   - Tabla `PRODUCTO`
 
@@ -43,7 +43,7 @@
   |Columna        |Tipo de datos |Restricción|Descripción                                                                                           |
   |---------------|--------------|-----------|------------------------------------------------------------------------------------------------------|
   |`codTienda`    |`INT`         |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
-  |`dirección`    |`VARCHAR(200)`|           |Dirección de la tienda                                                                                |
+  |`dirección`    |`VARCHAR(200)`|`VNN` `UK`     |Dirección de la tienda                                                                                |
   |`codProvincia` |`CHAR(36)`    |`FK`       |Codigo de la provincia en la que se encuentra la tienda proveniente de `PROVINCIA`                    |
   |`cantidad`     |`VARCHAR(100)`|           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
 
