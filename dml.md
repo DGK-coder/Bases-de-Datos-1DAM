@@ -188,11 +188,11 @@ INSERT INTO VENDER (dniDependiente, idProducto, cantidad) VALUES
 ### TABLA `LIMPIEZA`
 ```sql
 INSERT INTO LIMPIEZA (dniLimpieza) VALUES
-  (SELECT dni FROM PERSONAL WHERE nombre='Juan' AND apellido1='Pérez'),
-  (SELECT dni FROM PERSONAL WHERE nombre='Ana' AND apellido1='García'),
-  (SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Martín'),
-  (SELECT dni FROM PERSONAL WHERE nombre='Marta' AND apellido1='Díaz'),
-  (SELECT dni FROM PERSONAL WHERE nombre='Carlos' AND apellido1='Vega');
+  ((SELECT dni FROM PERSONAL WHERE nombre='Juan' AND apellido1='Pérez')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Ana' AND apellido1='García')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Martín')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Marta' AND apellido1='Díaz')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Carlos' AND apellido1='Vega'));
 ```
 
 ### TABLA `LIMPIAR`
