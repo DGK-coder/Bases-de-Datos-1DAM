@@ -3,7 +3,8 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 
 - **PROVINCIA** (`codProvincia`, `nombre`)  
 	PK: (`codProvincia`)  
-	VNN: (`nombre`)
+	VNN: (`nombre`)  
+	UK: (`nombre`)
 
 - **PRODUCTO** (`id`, `stock`, `fechaVenta`,`compra`,`venta`,`beneficio`)  
 	PK: (`id`)
@@ -25,7 +26,9 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 - **TIENDA** (`codTienda`, `direccion`, `codProvincia*`, `cantidad`)  
 	PK: (`codTienda`)  
 	FK: (`codProvincia`) --> *PROVINCIA*  
-  	VNN: (`codProvincia`)
+  	VNN: (`codProvincia`)  
+  	VNN: (`direccion`)  
+  	UK: (`direccion`)
 
 - **TELEFONO** (`numero`, `codigo*`)  
 	PK: (`numero`)	  
