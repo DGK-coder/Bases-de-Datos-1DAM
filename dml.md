@@ -21,31 +21,31 @@ INSERT INTO PROVINCIA (nombre) VALUES
 
 ### TABLA `PRODUCTO`
 ```sql
-INSERT INTO PRODUCTO (stock, fechaVenta, compra, venta) VALUES
-  (50,'2024-01-10', 10.00, 15.00),
-  (NULL,'2024-01-11', 8.50, 12.00),
-  (35,'2024-01-12', 5.00, 9.50),
-  (60,'2024-01-13', 20.00, 27.50),
-  (NULL,'2024-01-14', 12.00, 18.00),
-  (80,'2024-01-15', 7.25, 11.00),
-  (10,'2024-01-16', 9.00, 14.00),
-  (25,'2024-01-17', 25.00, 32.00),
-  (40,NULL,6.00, 10.00),
-  (55,'2024-01-19', 11.50, 16.50);
+INSERT INTO PRODUCTO (nombre, stock, fechaVenta, compra, venta) VALUES
+  ('The Legend of Zelda: Tears of the Kingdom', 50, '2024-01-10', 10.00, 15.00),
+  ('God of War Ragnarök', NULL, '2024-01-11', 8.50, 12.00),
+  ('Elden Ring', 35, '2024-01-12', 5.00, 9.50),
+  ('Call of Duty: Modern Warfare III', 60, '2024-01-13', 20.00, 27.50),
+  ('FIFA 24', NULL, '2024-01-14', 12.00, 18.00),
+  ('Minecraft', 80, '2024-01-15', 7.25, 11.00),
+  ('Hollow Knight', 10, '2024-01-16', 9.00, 14.00),
+  ('Cyberpunk 2077', 25, '2024-01-17', 25.00, 32.00),
+  ('Stardew Valley', 40, NULL, 6.00, 10.00),
+  ('Resident Evil 4 Remake', 55, '2024-01-19', 11.50, 16.50);
 ```
 ### TABLA `PROVENIR`
 ```sql
 INSERT INTO PROVENIR (idProducto, codProvincia) VALUES
-  (1,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Alicante')),
-  (2,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Valencia')),
-  (3,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Madrid')),
-  (4,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Barcelona')),
-  (5,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla')),
-  (6,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Murcia')),
-  (7,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla')),
-  (8,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Granada')),
-  (9,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Zaragoza')),
-  (10,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Tarragona'));
+  ((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Alicante')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Valencia')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Madrid')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Barcelona')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Murcia')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Granada')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Elden Ring'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Zaragoza')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Tarragona'));
 ```
 
 ### TABLA `CATEGORIA`
@@ -66,8 +66,16 @@ INSERT INTO CATEGORIA (nombre) VALUES
 ### TABLA `PERTENECER`
 ```sql
 INSERT INTO PERTENECER (idCategoria, idProducto) VALUES
-  (1,1),(2,2),(3,3),(4,4),(5,5),
-  (6,6),(7,7),(8,8),(9,9),(10,10);
+  ((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda'),1),
+  ((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),2),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),3),
+  ((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),4),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),5),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),6),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077'),7),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley'),8),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Elden Ring'),9),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'),10);
 ```
 
 ### TABLA `TIENDA`
