@@ -173,16 +173,16 @@ INSERT INTO ENSENYAR (dniEns, dniApr, tiempo) VALUES
 ### TABLA `VENDER`
 ```sql
 INSERT INTO VENDER (dniDependiente, idProducto, cantidad) VALUES
-  ((SELECT dni FROM PERSONAL WHERE nombre='Laura' AND apellido1='Navarro'),((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom'),2),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),1),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Pablo' AND apellido1='Pérez'),((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III'),NULL),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),2),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Sara' AND apellido1='Romero'),((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),1),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Laura' AND apellido1='Navarro'),((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),4),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Sara' AND apellido1='Romero'),((SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077'),2),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),((SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley'),NULL),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Pablo' AND apellido1='Pérez'),((SELECT id FROM PRODUCTO WHERE nombre='Elden Ring'),1),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),((SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'),2);
+  ((SELECT dni FROM PERSONAL WHERE nombre='Laura' AND apellido1='Navarro'),(SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom'),2),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),(SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),1),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Pablo' AND apellido1='Pérez'),(SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III'),NULL),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),(SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),2),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Sara' AND apellido1='Romero'),(SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),1),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Laura' AND apellido1='Navarro'),(SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),4),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Sara' AND apellido1='Romero'),(SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077'),2),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),(SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley'),NULL),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Pablo' AND apellido1='Pérez'),(SELECT id FROM PRODUCTO WHERE nombre='Elden Ring'),1),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),(SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'),2);
 ```
 
 ### TABLA `LIMPIEZA`
