@@ -30,7 +30,7 @@
   |Columna    |Tipo de datos  |Restricción  |Descripción                                          |
   |-----------|---------------|-------------|-----------------------------------------------------|
   |`id`       |`INT`          |`PK`         |Clave primaria. código identificativo de la categoría|
-  |`nombre`   |`VARCHAR(100)` |`VNN`        |Nombre que "describe" el tipo de categoría a tratar  |
+  |`nombre`   |`VARCHAR(100)` |`VNN`  `UK`  |Nombre que "describe" el tipo de categoría a tratar  |
 
   - Tabla `PERTENECER`
   
