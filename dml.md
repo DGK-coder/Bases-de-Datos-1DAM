@@ -73,16 +73,16 @@ INSERT INTO PERTENECER (idCategoria, idProducto) VALUES
 ### TABLA `TIENDA`
 ```sql
 INSERT INTO TIENDA (direccion, codProvincia, cantidad) VALUES
-  ('Calle A', '11111111-1111-1111-1111-111111111111',10),
-  ('Calle B', '22222222-2222-2222-2222-222222222222',12),
-  (NULL, '33333333-3333-3333-3333-333333333333',8),
-  ('Calle D', '44444444-4444-4444-4444-444444444444',20),
-  ('Calle E', '55555555-5555-5555-5555-555555555555',12),
-  ('Calle F', '11111111-1111-1111-1111-111111111111',18),
-  ('Calle G', '77777777-7777-7777-7777-777777777777',9),
-  ('Calle H', '88888888-8888-8888-8888-888888888888',10),
-  ('Calle I', '99999999-9999-9999-9999-999999999999',14),
-  (NULL,'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',16);
+  ('Calle A', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Alicante'),10),
+  ('Calle B', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Valencia'),12),
+  (NULL, (SELECT codProvincia FROM PROVINCIA WHERE nombre='Madrid'),8),
+  ('Calle D', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Barcelona'),20),
+  ('Calle E', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla'),
+  ('Calle F', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Murcia'),
+  ('Calle G', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla'),
+  ('Calle H', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Granada')),
+  ('Calle I', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Zaragoza')),14),
+  (NULL,(SELECT codProvincia FROM PROVINCIA WHERE nombre='Tarragona'),16);
 ```
 
 ### TABLA `TELEFONO`
