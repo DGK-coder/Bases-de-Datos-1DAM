@@ -66,7 +66,7 @@ CREATE TABLE TIENDA(
     codTienda CHAR(36) DEFAULT UUID(),
     direccion VARCHAR(200),
     codProvincia CHAR(36),
-    cantidad INT NOT NULL,
+    cantidad INT UNSIGNED NOT NULL,
     CONSTRAINT PK_TIENDA PRIMARY KEY (codTienda),
     CONSTRAINT FK_TIENDA_PROVINCIA FOREIGN KEY (codProvincia) REFERENCES PROVINCIA(codProvincia)
         ON DELETE NO ACTION
@@ -156,7 +156,7 @@ CREATE TABLE ENSENYAR(
 CREATE TABLE VENDER(
     dniDependiente CHAR(9),
     idProducto INT,
-    cantidad INT,
+    cantidad INT UNSIGNED,
     CONSTRAINT PK_VENDER PRIMARY KEY (dniDependiente, idProducto),
     CONSTRAINT FK_VENDER_DEPENDIENTE FOREIGN KEY (dniDependiente) REFERENCES DEPENDIENTE(dniDependiente)
         ON DELETE CASCADE
