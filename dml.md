@@ -167,7 +167,7 @@ INSERT INTO DEPENDIENTE (dniDependiente, corrIdent) VALUES
 ```sql
 INSERT INTO ENSENYAR (dniEns, dniApr, tiempo) VALUES
   ((SELECT dni FROM PERSONAL WHERE nombre='Laura' AND apellido1='Navarro'),(SELECT dni FROM PERSONAL WHERE nombre='Pablo' AND apellido1='Pérez'),'2023-01-01'),
-  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),(SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),'2023-01-02'),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),(SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),'2023-01-02');
 ```
 
 ### TABLA `VENDER`
