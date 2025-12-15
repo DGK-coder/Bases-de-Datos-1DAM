@@ -11,7 +11,7 @@ use TiendasDeVideojuegos;
 ```sql
 CREATE TABLE PROVINCIA(
     codProvincia CHAR(36) DEFAULT UUID (),
-    nombre VARCHAR(100),
+    nombre VARCHAR(100) NOT NULL,
     CONSTRAINT PK_Provincia PRIMARY KEY (codProvincia)
 );
 ```
@@ -42,7 +42,7 @@ CREATE TABLE PROVENIR(
 ```sql
 CREATE TABLE CATEGORIA(
     id INT AUTO_INCREMENT,
-    nombre VARCHAR(100),
+    nombre VARCHAR(100) NOT NULL,
     CONSTRAINT PK_CATEGORIA PRIMARY KEY (id)
 );
 ```
@@ -104,7 +104,7 @@ CREATE TABLE SALA(
     num INT AUTO_INCREMENT,
     codTienda CHAR(36),
     metrosCua INT,
-    nombre VARCHAR(100) UNIQUE,
+    nombre VARCHAR(100) UNIQUE NOT NULL,
     CONSTRAINT PK_SALA PRIMARY KEY (num),
     CONSTRAINT FK_SALA_TIENDA FOREIGN KEY (codTienda) REFERENCES TIENDA(codTienda)
         ON DELETE CASCADE
