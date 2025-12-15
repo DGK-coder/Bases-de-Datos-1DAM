@@ -36,7 +36,7 @@ INSERT INTO PRODUCTO (nombre, stock, fechaVenta, compra, venta) VALUES
 ### TABLA `PROVENIR`
 ```sql
 INSERT INTO PROVENIR (idProducto, codProvincia) VALUES
-  ((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Alicante')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Alicante')),
   ((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Valencia')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Madrid')),
   ((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Barcelona')),
@@ -66,7 +66,7 @@ INSERT INTO CATEGORIA (nombre) VALUES
 ### TABLA `PERTENECER`
 ```sql
 INSERT INTO PERTENECER (idCategoria, idProducto) VALUES
-  ((SELECT id FROM PRODUCTO WHERE nombre='Acción'),(SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Acción'),(SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Aventura'),(SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Deportes'),(SELECT id FROM PRODUCTO WHERE nombre='Call of Duty')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Terror'),(SELECT id FROM PRODUCTO WHERE nombre='FIFA 24')),
@@ -181,7 +181,7 @@ INSERT INTO ENSENYAR (dniEns, dniApr, tiempo) VALUES
 ### TABLA `VENDER`
 ```sql
 INSERT INTO VENDER (dniDependiente, idProducto, cantidad) VALUES
-  ('11111111A',((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda'),2),
+  ('11111111A',((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom'),2),
   ('22222222B',((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),1),
   ('33333333C',((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),NULL),
   ('44444444D',((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),2),
