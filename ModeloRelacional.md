@@ -7,8 +7,8 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 	UK: (`nombre`)
 
 - **PRODUCTO** (`id`, `nombre`, `stock`, `fechaVenta`,`compra`,`venta`,`beneficio`)  
-	PK: (`id`)
-	VNN: (`nombre`)
+	PK: (`id`)  
+	VNN: (`nombre`)  
 	UK: (`nombre`)
 
 - **PROVENIR** (`idProducto*`, `codProvincia*`)  
