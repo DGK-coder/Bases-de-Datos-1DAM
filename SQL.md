@@ -66,7 +66,7 @@ CREATE TABLE TIENDA(
     codTienda CHAR(36) DEFAULT UUID(),
     direccion VARCHAR(200),
     codProvincia CHAR(36),
-    cantidad INT,
+    cantidad INT NOT NULL,
     CONSTRAINT PK_TIENDA PRIMARY KEY (codTienda),
     CONSTRAINT FK_TIENDA_PROVINCIA FOREIGN KEY (codProvincia) REFERENCES PROVINCIA(codProvincia)
         ON DELETE NO ACTION
