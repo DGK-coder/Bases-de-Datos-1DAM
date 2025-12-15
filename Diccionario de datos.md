@@ -4,7 +4,7 @@
   |Columna       |Tipo de datos  |Restricción  |Descripción                                          |
   |--------------|---------------|-------------|-----------------------------------------------------|
   |`codProvincia`|`CHAR(36)`     |`PK`         |Clave primaria. código identificativo de la provincia|
-  |`nombre`      |`VARCHAR(100)` |             |Nombre que ayuda a identificar la provincia          |
+  |`nombre`      |`VARCHAR(100)` |`VNN`        |Nombre que ayuda a identificar la provincia          |
 
   - Tabla `PRODUCTO`
 
@@ -29,7 +29,7 @@
   |Columna    |Tipo de datos  |Restricción  |Descripción                                          |
   |-----------|---------------|-------------|-----------------------------------------------------|
   |`id`       |`INT`          |`PK`         |Clave primaria. código identificativo de la categoría|
-  |`nombre`   |`VARCHAR(100)` |             |Nombre que "describe" el tipo de categoría a tratar  |
+  |`nombre`   |`VARCHAR(100)` |`VNN`        |Nombre que "describe" el tipo de categoría a tratar  |
 
   - Tabla `PERTENECER`
   
@@ -68,14 +68,14 @@
   |`num`      |`VARCHAR(2)`  |`PK`           |Clave primaria. número que identifica la sala de la tienda                      |
   |`codTienda`|`CHAR(36)`    |`PK` `FK`      |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA` |
   |`metrosCua`|`INT`         |               |Metros cuadrados de la sala                                                     |
-  |`nombre`   |`VARCHAR(100)`|               |Nombre de sala que ayuda a identificarla                                        |
+  |`nombre`   |`VARCHAR(100)`|`UK`           |Nombre de sala que ayuda a identificarla                                        |
 
   - Tabla `PERSONAL`
 
   |Columna     |Tipo de datos |Restricción    |Descripción                                                                        |
   |------------|--------------|---------------|-----------------------------------------------------------------------------------|
   |`dni`       |`CHAR(9)`     |`PK`           |Clave primaria. Documento nacional de identidad del personal                       |
-  |`nombre`    |`VARCHAR(100)`|               |Nombre del personal                                                                |
+  |`nombre`    |`VARCHAR(100)`|`VNN`          |Nombre del personal                                                                |
   |`apellido1` |`VARCHAR(100)`|               |Primer apellido del personal                                                       |
   |`apellido2` |`VARCHAR(100)`|               |Segundo apellido del personal                                                      |
   |`codTienda` |`CHAR(36)`    |`FK`           |Código de la tienda en la que trabaja el personal, que proviene de `TIENDA`        |
