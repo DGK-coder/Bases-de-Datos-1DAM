@@ -8,7 +8,7 @@ use TiendasDeVideojuegos;
 ```sql
 INSERT INTO PROVINCIA (nombre) VALUES
   ('Alicante'),
-  ('Elche'),
+  ('Valencia'),
   ('Madrid'),
   ('Barcelona'),
   ('Murcia'),
@@ -16,7 +16,7 @@ INSERT INTO PROVINCIA (nombre) VALUES
   ('Granada'),
   ('Zaragoza'),
   ('Bilbao'),
-  ('Aspe');
+  ('Tarragona');
 ```
 
 ### TABLA `PRODUCTO`
