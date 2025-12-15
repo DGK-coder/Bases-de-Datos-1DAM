@@ -6,17 +6,17 @@ use TiendasDeVideojuegos;
 ## CREACION DE REGISTROS
 ### TABLA `PROVINCIA`
 ```sql
-INSERT INTO PROVINCIA (codProvincia, nombre) VALUES
-  ('11111111-1111-1111-1111-111111111111','Alicante'),
-  ('22222222-2222-2222-2222-222222222222','Elche'),
-  ('33333333-3333-3333-3333-333333333333','Madrid'),
-  ('44444444-4444-4444-4444-444444444444','Barcelona'),
-  ('55555555-5555-5555-5555-555555555555','Murcia'),
-  ('66666666-6666-6666-6666-666666666666','Sevilla'),
-  ('77777777-7777-7777-7777-777777777777','Granada'),
-  ('88888888-8888-8888-8888-888888888888','Zaragoza'),
-  ('99999999-9999-9999-9999-999999999999','Bilbao'),
-  ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa','Aspe');
+INSERT INTO PROVINCIA (nombre) VALUES
+  ('Alicante'),
+  ('Elche'),
+  ('Madrid'),
+  ('Barcelona'),
+  ('Murcia'),
+  ('Sevilla'),
+  ('Granada'),
+  ('Zaragoza'),
+  ('Bilbao'),
+  ('Aspe');
 ```
 
 ### TABLA `PRODUCTO`
@@ -72,17 +72,17 @@ INSERT INTO PERTENECER (idCategoria, idProducto) VALUES
 
 ### TABLA `TIENDA`
 ```sql
-INSERT INTO TIENDA (codTienda, direccion, codProvincia, cantidad) VALUES
-  ('t1','Calle A', '11111111-1111-1111-1111-111111111111',10),
-  ('t2','Calle B', '22222222-2222-2222-2222-222222222222',12),
-  ('t3',NULL, '33333333-3333-3333-3333-333333333333',8),
-  ('t4','Calle D', '44444444-4444-4444-4444-444444444444',20),
-  ('t5','Calle E', '55555555-5555-5555-5555-555555555555',12),
-  ('t6','Calle F', '11111111-1111-1111-1111-111111111111',18),
-  ('t7','Calle G', '77777777-7777-7777-7777-777777777777',9),
-  ('t8','Calle H', '88888888-8888-8888-8888-888888888888',10),
-  ('t9','Calle I', '99999999-9999-9999-9999-999999999999',14),
-  ('t10',NULL,'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',16);
+INSERT INTO TIENDA (direccion, codProvincia, cantidad) VALUES
+  ('Calle A', '11111111-1111-1111-1111-111111111111',10),
+  ('Calle B', '22222222-2222-2222-2222-222222222222',12),
+  (NULL, '33333333-3333-3333-3333-333333333333',8),
+  ('Calle D', '44444444-4444-4444-4444-444444444444',20),
+  ('Calle E', '55555555-5555-5555-5555-555555555555',12),
+  ('Calle F', '11111111-1111-1111-1111-111111111111',18),
+  ('Calle G', '77777777-7777-7777-7777-777777777777',9),
+  ('Calle H', '88888888-8888-8888-8888-888888888888',10),
+  ('Calle I', '99999999-9999-9999-9999-999999999999',14),
+  (NULL,'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',16);
 ```
 
 ### TABLA `TELEFONO`
