@@ -19,6 +19,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 - **CATEGORIA** (`id`, `nombre`)  
 	PK: (`id`)  
 	VNN: (`nombre`)
+	UK: (`nombre`)
 
 - **PERTENECER** (`idCategoria*`, `idProducto*`)  
 	PK: (`idCategoria`, `idProducto`)  
