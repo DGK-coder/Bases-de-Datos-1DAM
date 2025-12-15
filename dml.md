@@ -8,7 +8,7 @@ use TiendasDeVideojuegos;
 ```sql
 INSERT INTO PROVINCIA (codProvincia, nombre) VALUES
   ('11111111-1111-1111-1111-111111111111','Alicante'),
-  ('22222222-2222-2222-2222-222222222222', NULL),
+  ('22222222-2222-2222-2222-222222222222','Elche'),
   ('33333333-3333-3333-3333-333333333333','Madrid'),
   ('44444444-4444-4444-4444-444444444444','Barcelona'),
   ('55555555-5555-5555-5555-555555555555','Murcia'),
@@ -16,7 +16,7 @@ INSERT INTO PROVINCIA (codProvincia, nombre) VALUES
   ('77777777-7777-7777-7777-777777777777','Granada'),
   ('88888888-8888-8888-8888-888888888888','Zaragoza'),
   ('99999999-9999-9999-9999-999999999999','Bilbao'),
-  ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', NULL);
+  ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa','Aspe');
 ```
 
 ### TABLA `PRODUCTO`
@@ -54,12 +54,12 @@ INSERT INTO CATEGORIA (nombre) VALUES
   ('Acción'),
   ('Aventura'),
   ('Deportes'),
-  (NULL),
+  ('Terror'),
   ('Estrategia'),
   ('Simulación'),
   ('Carreras'),
   ('Shooter'),
-  (NULL),
+  ('Cooperativo'),
   ('Familiar');
 ```
 
@@ -114,9 +114,9 @@ INSERT INTO SALA (codTienda, metrosCua, nombre) VALUES
   ('t2',60,'Sala B'),
   ('t3',45,'Sala C'),
   ('t4',70,'Sala D'),
-  ('t5',55,NULL),
+  ('t5',55,'Sala E'),
   ('t1',65,'Sala F'),
-  ('t7',40,NULL),
+  ('t7',40,'Sala G'),
   ('t8',48,'Sala H'),
   ('t9',58,'Sala I'),
   ('t10',NULL,'Sala J');
