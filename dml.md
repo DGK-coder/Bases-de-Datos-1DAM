@@ -113,11 +113,11 @@ INSERT INTO SALA (codTienda, metrosCua, nombre) VALUES
   ('t1',NULL,'Sala A'),
   ('t2',60,'Sala B'),
   ('t3',45,'Sala C'),
-  ('t4',70,'Sala D'),
+  ('t4',70, NULL),
   ('t5',55,'Sala E'),
   ('t1',65,'Sala F'),
   ('t7',40,'Sala G'),
-  ('t8',48,'Sala H'),
+  ('t8',48, NULL),
   ('t9',58,'Sala I'),
   ('t10',NULL,'Sala J');
 ```
