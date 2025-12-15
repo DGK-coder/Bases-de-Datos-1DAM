@@ -25,7 +25,7 @@ INSERT INTO PRODUCTO (nombre, stock, fechaVenta, compra, venta) VALUES
   ('The Legend of Zelda: Tears of the Kingdom', 50, '2024-01-10', 10.00, 15.00),
   ('God of War Ragnarök', NULL, '2024-01-11', 8.50, 12.00),
   ('Elden Ring', 35, '2024-01-12', 5.00, 9.50),
-  ('Call of Duty: Modern Warfare III', 60, '2024-01-13', 10.00, 15.00),
+  ('Call of Duty: Modern Warfare III: Modern Warfare III', 60, '2024-01-13', 10.00, 15.00),
   ('FIFA 24', NULL, '2024-01-14', 12.00, 18.00),
   ('Minecraft', 35, '2024-01-13', 10.00, 11.00),
   ('Hollow Knight', 10, '2024-01-16', 9.00, 14.00),
@@ -38,7 +38,7 @@ INSERT INTO PRODUCTO (nombre, stock, fechaVenta, compra, venta) VALUES
 INSERT INTO PROVENIR (idProducto, codProvincia) VALUES
   ((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Alicante')),
   ((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Valencia')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Madrid')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Madrid')),
   ((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Barcelona')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),(SELECT codProvincia FROM PROVINCIA WHERE nombre='Murcia')),
@@ -68,7 +68,7 @@ INSERT INTO CATEGORIA (nombre) VALUES
 INSERT INTO PERTENECER (idCategoria, idProducto) VALUES
   ((SELECT id FROM PRODUCTO WHERE nombre='Acción'),(SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Aventura'),(SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Deportes'),(SELECT id FROM PRODUCTO WHERE nombre='Call of Duty')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Deportes'),(SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Terror'),(SELECT id FROM PRODUCTO WHERE nombre='FIFA 24')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Estrategia'),(SELECT id FROM PRODUCTO WHERE nombre='Minecraft')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Simulación'),(SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight')),
@@ -111,9 +111,9 @@ INSERT INTO TELEFONO (numero, codTienda) VALUES
 ### TABLA `DISPONER`
 ```sql
 INSERT INTO DISPONER (idProducto, codTienda) VALUES
-  ((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle A')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle A')),
   ((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle B')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
   ((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle D')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle E')),
   ((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle F')),
@@ -183,7 +183,7 @@ INSERT INTO ENSENYAR (dniEns, dniApr, tiempo) VALUES
 INSERT INTO VENDER (dniDependiente, idProducto, cantidad) VALUES
   ('11111111A',((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom'),2),
   ('22222222B',((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),1),
-  ('33333333C',((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),NULL),
+  ('33333333C',((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III'),NULL),
   ('44444444D',((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),2),
   ('55555555E',((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),1),
   ('66666666F',((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),4),
