@@ -142,7 +142,7 @@ INSERT INTO SALA (codTienda, metrosCua, nombre) VALUES
 ```sql
 INSERT INTO PERSONAL (dni, nombre, apellido1, apellido2, codTienda, fecha_nac) VALUES
   ('11111111A','Juan','Pérez',NULL,(SELECT codTienda FROM TIENDA WHERE direccion='Calle A'), '1990-05-12'),
-  ('22222222B','Ana','García','Ruiz',(SELECT codTienda FROM TIENDA WHERE direccion='Calle B') '1988-09-20'),
+  ('22222222B','Ana','García','Ruiz',(SELECT codTienda FROM TIENDA WHERE direccion='Calle B'), '1988-09-20'),
   ('33333333C','Luis','Martín','Soto',(SELECT codTienda FROM TIENDA WHERE direccion='Calle C'), '1995-03-08'),
   ('44444444D','Marta','Díaz','Gil',(SELECT codTienda FROM TIENDA WHERE direccion='Calle D'), '1992-11-15'),
   ('55555555E','Carlos','Vega','Mora',(SELECT codTienda FROM TIENDA WHERE direccion='Calle E'), '1985-01-30'),
