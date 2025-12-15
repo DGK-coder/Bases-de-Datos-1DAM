@@ -166,31 +166,23 @@ INSERT INTO DEPENDIENTE (dniDependiente, corrIdent) VALUES
 ### TABLA `ENSENYAR`
 ```sql
 INSERT INTO ENSENYAR (dniEns, dniApr, tiempo) VALUES
-  ('11111111A','22222222B','2023-01-01'),
-  ('22222222B','33333333C','2023-01-02'),
-  ('33333333C','44444444D','2023-01-08'),
-  ('44444444D','55555555E','2023-01-04'),
-  ('55555555E','66666666F',NULL),
-  ('66666666F','77777777G','2023-01-06'),
-  ('77777777G','88888888H','2023-01-07'),
-  ('88888888H','99999999I','2023-01-08'),
-  ('99999999I','00000000J','2023-01-09'),
-  ('00000000J','11111111A',NULL);
+  ((SELECT dni FROM PERSONAL WHERE nombre='Laura' AND apellido1='Navarro'),(SELECT dni FROM PERSONAL WHERE nombre='Pablo' AND apellido1='Pérez'),'2023-01-01'),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),(SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),'2023-01-02'),
 ```
 
 ### TABLA `VENDER`
 ```sql
 INSERT INTO VENDER (dniDependiente, idProducto, cantidad) VALUES
-  ('11111111A',((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom'),2),
-  ('22222222B',((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),1),
-  ('33333333C',((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III'),NULL),
-  ('44444444D',((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),2),
-  ('55555555E',((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),1),
-  ('66666666F',((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),4),
-  ('77777777G',((SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077'),2),
-  ('88888888H',((SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley'),NULL),
-  ('99999999I',((SELECT id FROM PRODUCTO WHERE nombre='Elden Ring'),1),
-  ('00000000J',((SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'),2);
+  ((SELECT dni FROM PERSONAL WHERE nombre='Laura' AND apellido1='Navarro'),((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom'),2),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),1),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Pablo' AND apellido1='Pérez'),((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III'),NULL),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),2),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Sara' AND apellido1='Romero'),((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),1),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Laura' AND apellido1='Navarro'),((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),4),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Sara' AND apellido1='Romero'),((SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077'),2),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Elena' AND apellido1='Ramos'),((SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley'),NULL),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Pablo' AND apellido1='Pérez'),((SELECT id FROM PRODUCTO WHERE nombre='Elden Ring'),1),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Torres'),((SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'),2);
 ```
 
 ### TABLA `LIMPIEZA`
@@ -206,14 +198,14 @@ INSERT INTO LIMPIEZA (dniLimpieza) VALUES
 ### TABLA `LIMPIAR`
 ```sql
 INSERT INTO LIMPIAR (dniLimpieza, numSala, codTienda) VALUES
-  ('11111111A',1,(SELECT codTienda FROM TIENDA WHERE direccion='Calle A')),
-  ('22222222B',2,(SELECT codTienda FROM TIENDA WHERE direccion='Calle B')),
-  ('33333333C',3,(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
-  ('44444444D',4,(SELECT codTienda FROM TIENDA WHERE direccion='Calle D')),
-  ('55555555E',5,(SELECT codTienda FROM TIENDA WHERE direccion='Calle E')),
-  ('66666666F',6,(SELECT codTienda FROM TIENDA WHERE direccion='Calle F')),
-  ('77777777G',7,(SELECT codTienda FROM TIENDA WHERE direccion='Calle G')),
-  ('88888888H',8,(SELECT codTienda FROM TIENDA WHERE direccion='Calle H')),
-  ('99999999I',9,(SELECT codTienda FROM TIENDA WHERE direccion='Calle I')),
-  ('00000000J',10,(SELECT codTienda FROM TIENDA WHERE direccion='Calle J'));
+  ((SELECT dni FROM PERSONAL WHERE nombre='Juan' AND apellido1='Pérez'),1,(SELECT codTienda FROM TIENDA WHERE direccion='Calle A')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Martín'),2,(SELECT codTienda FROM TIENDA WHERE direccion='Calle B')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Ana' AND apellido1='García'),3,(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Marta' AND apellido1='Díaz'),4,(SELECT codTienda FROM TIENDA WHERE direccion='Calle D')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Carlos' AND apellido1='Vega'),5,(SELECT codTienda FROM TIENDA WHERE direccion='Calle E')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Juan' AND apellido1='Pérez'),6,(SELECT codTienda FROM TIENDA WHERE direccion='Calle F')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Carlos' AND apellido1='Vega'),7,(SELECT codTienda FROM TIENDA WHERE direccion='Calle G')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Marta' AND apellido1='Díaz'),8,(SELECT codTienda FROM TIENDA WHERE direccion='Calle H')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Ana' AND apellido1='García'),9,(SELECT codTienda FROM TIENDA WHERE direccion='Calle I')),
+  ((SELECT dni FROM PERSONAL WHERE nombre='Luis' AND apellido1='Martín'),10,(SELECT codTienda FROM TIENDA WHERE direccion='Calle J'));
 ```
