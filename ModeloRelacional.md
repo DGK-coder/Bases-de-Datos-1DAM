@@ -56,7 +56,9 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 
 - **DEPENDIENTE** (`dniDependiente*`, `corrIdent`)  
 	PK: (`dniDependiente`)	  
-	FK: (`dniDependiente`) --> *PERSONAL*
+	FK: (`dniDependiente`) --> *PERSONAL*  
+  	VNN: (`corrIdent`)   
+  	UK: (`corrIdent`)
 
 - **ENSENYAR** (`dniEns*`, `dniApr*`,`tiempo`)  
   	PK: (`dniEns`, `dniApr`)  
