@@ -39,7 +39,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 - **SALA** (`num`, `codTienda*`, `nombre`, `metrosCua`)  
 	PK: (`num`, `codTienda`)	  
 	FK: (`codTienda`) --> *TIENDA*
-	VNN: (`nombre`)
+	VNN: (`nombre`)  
 	UK: (`nombre`)
 
 - **PERSONAL** (`dni`, `nombre`, `apellido1`, `apellido2`, `codTienda`*,`fecha_nac`,`edad`)  
