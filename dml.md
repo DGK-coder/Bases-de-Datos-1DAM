@@ -21,17 +21,17 @@ INSERT INTO PROVINCIA (codProvincia, nombre) VALUES
 
 ### TABLA `PRODUCTO`
 ```sql
-INSERT INTO PRODUCTO (stock, fechaVenta) VALUES
-  (50,'2024-01-10'),
-  (NULL,'2024-01-11'),
-  (35,'2024-01-12'),
-  (60,'2024-01-13'),
-  (NULL,'2024-01-14'),
-  (80,'2024-01-15'),
-  (10,'2024-01-16'),
-  (25,'2024-01-17'),
-  (40,NULL),
-  (55,'2024-01-19');
+INSERT INTO PRODUCTO (stock, fechaVenta, compra, venta) VALUES
+  (50,'2024-01-10', 10.00, 15.00),
+  (NULL,'2024-01-11', 8.50, 12.00),
+  (35,'2024-01-12', 5.00, 9.50),
+  (60,'2024-01-13', 20.00, 27.50),
+  (NULL,'2024-01-14', 12.00, 18.00),
+  (80,'2024-01-15', 7.25, 11.00),
+  (10,'2024-01-16', 9.00, 14.00),
+  (25,'2024-01-17', 25.00, 32.00),
+  (40,NULL,6.00, 10.00),
+  (55,'2024-01-19', 11.50, 16.50);
 ```
 ### TABLA `PROVENIR`
 ```sql
@@ -124,17 +124,17 @@ INSERT INTO SALA (codTienda, metrosCua, nombre) VALUES
 
 ### TABLA `PERSONAL`
 ```sql
-INSERT INTO PERSONAL (dni, nombre, apellido1, apellido2, codTienda) VALUES
-  ('11111111A','Juan','Pérez',NULL,'t1'),
-  ('22222222B','Ana','García','Ruiz','t2'),
-  ('33333333C','Luis','Martín','Soto','t3'),
-  ('44444444D','Marta','Díaz','Gil','t4'),
-  ('55555555E','Carlos','Vega','Mora','t5'),
-  ('66666666F','Laura','Navarro','Cruz','t6'),
-  ('77777777G','Pablo','Ortega','León','t7'),
-  ('88888888H','Sara','Romero',NULL,'t8'),
-  ('99999999I','Luis','Torres','Blanco','t9'),
-  ('00000000J','Elena','Ramos','Serrano','t10');
+INSERT INTO PERSONAL (dni, nombre, apellido1, apellido2, codTienda, fecha_nac) VALUES
+  ('11111111A','Juan','Pérez',NULL,'t1', '1990-05-12'),
+  ('22222222B','Ana','García','Ruiz','t2' '1988-09-20'),
+  ('33333333C','Luis','Martín','Soto','t3', '1995-03-08'),
+  ('44444444D','Marta','Díaz','Gil','t4', '1992-11-15'),
+  ('55555555E','Carlos','Vega','Mora','t5', '1985-01-30'),
+  ('66666666F','Laura','Navarro','Cruz','t6', '1998-07-04'),
+  ('77777777G','Pablo','Ortega','León','t7', '1991-12-22'),
+  ('88888888H','Sara','Romero',NULL,'t8', '1996-04-18'),
+  ('99999999I','Luis','Torres','Blanco','t9', '1989-06-10'),
+  ('00000000J','Elena','Ramos','Serrano','t10', '1988-09-20');
 ```
 
 ### TABLA `DEPENDIENTE`
