@@ -11,6 +11,7 @@
   |Columna     |Tipo de datos |Restricción    |Descripción                                       |
   |------------|--------------|---------------|--------------------------------------------------|
   |`id`        |`INT`         |`PK`           |Clave primaria. código identificativo del producto|
+  |`producto`  |`VARCHAR`     |`VNN` `UK`     |Nombre del producto                               |
   |`stock`     |`INT`         |               |Cantidad de producto en stock                     |
   |`fechaVenta`|`DATE`        |               |Fecha en la que se puso en venta el producto      |
   |`compra`    |`DECIMAL`     |               |Precio de compra del producto                     |
