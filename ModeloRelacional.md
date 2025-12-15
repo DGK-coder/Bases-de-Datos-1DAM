@@ -4,7 +4,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 - **PROVINCIA** (`codProvincia`, `nombre`)  
 	PK: (`codProvincia`)
 
-- **PRODUCTO** (`id`, `stock`, `fechaVenta`)  
+- **PRODUCTO** (`id`, `stock`, `fechaVenta`,`compra`,`venta`,`beneficio`)  
 	PK: (`id`)
 
 - **PROVENIR** (`idProducto*`, `codProvincia*`)  
@@ -38,7 +38,7 @@ Realizado por: David García, Sergio Motoya, Pascual Calvo.
 	PK: (`num`, `codTienda`)	  
 	FK: (`codTienda`) --> *TIENDA*	  
 
-- **PERSONAL** (`dni`, `nombre`, `apellido1`, `apellido2`, `codTienda`*)  
+- **PERSONAL** (`dni`, `nombre`, `apellido1`, `apellido2`, `codTienda`*,`fecha_nac`,`edad`)  
 	PK: (`dni`)  
 	FK: (`codTienda`) --> *TIENDA*  
 
