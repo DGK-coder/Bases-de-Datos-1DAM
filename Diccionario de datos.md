@@ -13,6 +13,9 @@
   |`id`        |`INT`         |`PK`           |Clave primaria. código identificativo del producto|
   |`stock`     |`INT`         |               |Cantidad de producto en stock                     |
   |`fechaVenta`|`DATE`        |               |Fecha en la que se puso en venta el producto      |
+  |`compra`    |`DECIMAL`     |               |Precio de compra del producto                     |
+  |`venta`     |`DECIMAL`     |               |Precio de venta del producto                      |
+  |`beneficio` |`DECIMAL`     |               |Beneficio calculado de `compra` y `venta`         |
 
   - Tabla `PROVENIR`
   
@@ -69,13 +72,15 @@
 
   - Tabla `PERSONAL`
 
-  |Columna     |Tipo de datos |Restricción    |Descripción                                                                |
-  |------------|--------------|---------------|---------------------------------------------------------------------------|
-  |`dni`       |`CHAR(9)`     |`PK`           |Clave primaria. Documento nacional de identidad del personal               |
-  |`nombre`    |`VARCHAR(100)`|               |Nombre del personal                                                        |
-  |`apellido1` |`VARCHAR(100)`|               |Primer apellido del personal                                               |
-  |`apellido2` |`VARCHAR(100)`|               |Segundo apellido del personal                                              |
-  |`codTienda` |`CHAR(36)`    |`FK`           |Código de la tienda en la que trabaja el personal, que proviene de `TIENDA`|
+  |Columna     |Tipo de datos |Restricción    |Descripción                                                                        |
+  |------------|--------------|---------------|-----------------------------------------------------------------------------------|
+  |`dni`       |`CHAR(9)`     |`PK`           |Clave primaria. Documento nacional de identidad del personal                       |
+  |`nombre`    |`VARCHAR(100)`|               |Nombre del personal                                                                |
+  |`apellido1` |`VARCHAR(100)`|               |Primer apellido del personal                                                       |
+  |`apellido2` |`VARCHAR(100)`|               |Segundo apellido del personal                                                      |
+  |`codTienda` |`CHAR(36)`    |`FK`           |Código de la tienda en la que trabaja el personal, que proviene de `TIENDA`        |
+  |`fecha_nac` |`DATE`        |               |Fecha de nacimiento del personal                                                   |
+  |`edad`      |`INT`         |               |Valor calculado de `fecha_nac` y la fecha actual para calcular la edad del personal|
 
   - Tabla `DEPENDIENTE`
 
