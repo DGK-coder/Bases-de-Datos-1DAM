@@ -41,12 +41,12 @@
 
   - Tabla `TIENDA`
 
-  |Columna        |Tipo de datos |Restricción|Descripción                                                                                           |
-  |---------------|--------------|-----------|------------------------------------------------------------------------------------------------------|
-  |`codTienda`    |`INT`         |`PK`       |Clave primaria. número que identifica a la tienda                                                     |
-  |`dirección`    |`VARCHAR(200)`|`VNN` `UK`     |Dirección de la tienda                                                                                |
-  |`codProvincia` |`CHAR(36)`    |`FK`       |Codigo de la provincia en la que se encuentra la tienda proveniente de `PROVINCIA`                    |
-  |`cantidad`     |`VARCHAR(100)`|           |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
+  |Columna        |Tipo de datos |Restricción|Descripción                                                                                               |
+  |---------------|--------------|---------------|------------------------------------------------------------------------------------------------------|
+  |`codTienda`    |`INT`         |`PK`           |Clave primaria. número que identifica a la tienda                                                     |
+  |`dirección`    |`VARCHAR(200)`|`VNN`, `UK`    |Dirección de la tienda                                                                                |
+  |`codProvincia` |`CHAR(36)`    |`FK`           |Codigo de la provincia en la que se encuentra la tienda proveniente de `PROVINCIA`                    |
+  |`cantidad`     |`VARCHAR(100)`|               |Cantidad de tiendas que hay en una provincia, extraído de la tabla no expresada de la relación `HABER`|
 
   - Tabla `TELEFONO`
   
@@ -67,7 +67,7 @@
   |Columna    |Tipo de datos |Restricción    |Descripción                                                                     |
   |-----------|--------------|---------------|--------------------------------------------------------------------------------|
   |`num`      |`VARCHAR(2)`  |`PK`           |Clave primaria. número que identifica la sala de la tienda                      |
-  |`codTienda`|`CHAR(36)`    |`PK` `FK`      |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA` |
+  |`codTienda`|`CHAR(36)`    |`PK`, `FK`     |Código de tienda de la que pertenece la sala, que proviene de la tabla `TIENDA` |
   |`metrosCua`|`INT`         |               |Metros cuadrados de la sala                                                     |
   |`nombre`   |`VARCHAR(100)`|`UK`           |Nombre de sala que ayuda a identificarla                                        |
 
@@ -88,7 +88,7 @@
   |Columna          |Tipo de datos  |Restricción  |Descripción                                                 |
   |-----------------|---------------|-------------|------------------------------------------------------------|
   |`dniDependiente` |`CHAR(9)`      |`PK`, `FK`   |DNI del dependiendote, proveniente de `PERSONAL`            |
-  |`corrIdent`      |`VARCHAR(100)` |             |Correo con el que puede identificarse en la empresa         |
+  |`corrIdent`      |`VARCHAR(100)` |`VNN`, `UK`  |Correo con el que puede identificarse en la empresa         |
 
   - Tabla `ENSENYAR`
  
