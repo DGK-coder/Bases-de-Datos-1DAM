@@ -148,11 +148,6 @@ INSERT INTO PERSONAL (dni, nombre, apellido1, apellido2, codTienda, fecha_nac) V
 ### TABLA `DEPENDIENTE`
 ```sql
 INSERT INTO DEPENDIENTE (dniDependiente, corrIdent) VALUES
-  ('11111111A','emp1@tienda.com'),
-  ('22222222B','emp2@tienda.com'),
-  ('33333333C',NULL),
-  ('44444444D','emp4@tienda.com'),
-  ('55555555E','emp5@tienda.com'),
   ('66666666F','emp6@tienda.com'),
   ('77777777G',NULL),
   ('88888888H','emp8@tienda.com'),
@@ -197,12 +192,7 @@ INSERT INTO LIMPIEZA (dniLimpieza) VALUES
   ('22222222B'),
   ('33333333C'),
   ('44444444D'),
-  ('55555555E'),
-  ('66666666F'),
-  ('77777777G'),
-  ('88888888H'),
-  ('99999999I'),
-  ('00000000J');
+  ('55555555E');
 ```
 
 ### TABLA `LIMPIAR`
