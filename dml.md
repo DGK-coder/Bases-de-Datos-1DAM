@@ -66,16 +66,16 @@ INSERT INTO CATEGORIA (nombre) VALUES
 ### TABLA `PERTENECER`
 ```sql
 INSERT INTO PERTENECER (idCategoria, idProducto) VALUES
-  ((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda'),1),
-  ((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),2),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),3),
-  ((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),4),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),5),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),6),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077'),7),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley'),8),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Elden Ring'),9),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'),10);
+  ((SELECT id FROM PRODUCTO WHERE nombre='Acción'),(SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Aventura'),(SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Deportes'),(SELECT id FROM PRODUCTO WHERE nombre='Call of Duty')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Terror'),(SELECT id FROM PRODUCTO WHERE nombre='FIFA 24')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Estrategia'),(SELECT id FROM PRODUCTO WHERE nombre='Minecraft')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Simulación'),(SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Carreras'),(SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Shooter'),(SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Cooperativo'),(SELECT id FROM PRODUCTO WHERE nombre='Elden Ring')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Familiar'),(SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'));
 ```
 
 ### TABLA `TIENDA`
