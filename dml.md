@@ -85,11 +85,11 @@ INSERT INTO TIENDA (direccion, codProvincia, cantidad) VALUES
   ('Calle B', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Valencia'),12),
   ('Calle C', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Madrid'),8),
   ('Calle D', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Barcelona'),20),
-  ('Calle E', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla'),
-  ('Calle F', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Murcia'),
-  ('Calle G', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla'),
-  ('Calle H', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Granada')),
-  ('Calle I', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Zaragoza')),14),
+  ('Calle E', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla'),5),
+  ('Calle F', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Murcia'),3),
+  ('Calle G', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Sevilla'),9),
+  ('Calle H', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Granada'),5),
+  ('Calle I', (SELECT codProvincia FROM PROVINCIA WHERE nombre='Zaragoza'),14),
   ('Calle J',(SELECT codProvincia FROM PROVINCIA WHERE nombre='Tarragona'),16);
 ```
 
@@ -111,16 +111,16 @@ INSERT INTO TELEFONO (numero, codTienda) VALUES
 ### TABLA `DISPONER`
 ```sql
 INSERT INTO DISPONER (idProducto, codTienda) VALUES
-  (1,(SELECT codTienda FROM TIENDA WHERE direccion='Calle A')),
-  (2,(SELECT codTienda FROM TIENDA WHERE direccion='Calle B')),
-  (3,(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
-  (4,(SELECT codTienda FROM TIENDA WHERE direccion='Calle D')),
-  (5,(SELECT codTienda FROM TIENDA WHERE direccion='Calle E')),
-  (6,(SELECT codTienda FROM TIENDA WHERE direccion='Calle F')),
-  (7,(SELECT codTienda FROM TIENDA WHERE direccion='Calle G')),
-  (8,(SELECT codTienda FROM TIENDA WHERE direccion='Calle H')),
-  (9,(SELECT codTienda FROM TIENDA WHERE direccion='Calle I')),
-  (10,(SELECT codTienda FROM TIENDA WHERE direccion='Calle J'));
+  ((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle A')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle B')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle D')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle E')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle F')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle G')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle H')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Elden Ring'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle I')),
+  ((SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'),(SELECT codTienda FROM TIENDA WHERE direccion='Calle J'));
 ```
 
 ### TABLA `SALA`
@@ -181,16 +181,16 @@ INSERT INTO ENSENYAR (dniEns, dniApr, tiempo) VALUES
 ### TABLA `VENDER`
 ```sql
 INSERT INTO VENDER (dniDependiente, idProducto, cantidad) VALUES
-  ('11111111A',1,2),
-  ('22222222B',2,1),
-  ('33333333C',3,NULL),
-  ('44444444D',4,2),
-  ('55555555E',5,1),
-  ('66666666F',6,4),
-  ('77777777G',7,2),
-  ('88888888H',8,NULL),
-  ('99999999I',9,1),
-  ('00000000J',10,2);
+  ('11111111A',((SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda'),2),
+  ('22222222B',((SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök'),1),
+  ('33333333C',((SELECT id FROM PRODUCTO WHERE nombre='Call of Duty'),NULL),
+  ('44444444D',((SELECT id FROM PRODUCTO WHERE nombre='FIFA 24'),2),
+  ('55555555E',((SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight'),1),
+  ('66666666F',((SELECT id FROM PRODUCTO WHERE nombre='Minecraft'),4),
+  ('77777777G',((SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077'),2),
+  ('88888888H',((SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley'),NULL),
+  ('99999999I',((SELECT id FROM PRODUCTO WHERE nombre='Elden Ring'),1),
+  ('00000000J',((SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'),2);
 ```
 
 ### TABLA `LIMPIEZA`
