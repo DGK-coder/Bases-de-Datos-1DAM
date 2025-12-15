@@ -115,8 +115,8 @@ CREATE TABLE SALA(
 ```sql
 CREATE TABLE PERSONAL(
     dni CHAR(9),
-    nombre VARCHAR(100),
-    apellido1 VARCHAR(100),
+    nombre VARCHAR(100) NOT NULL,
+    apellido1 VARCHAR(100) NOT NULL,
     apellido2 VARCHAR(100),
     codTienda CHAR(36),
     CONSTRAINT PK_PERSONAL PRIMARY KEY (dni),
