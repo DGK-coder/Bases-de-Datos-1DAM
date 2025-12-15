@@ -21,6 +21,9 @@ CREATE TABLE PRODUCTO(
     id INT AUTO_INCREMENT,
     stock INT,
     fechaVenta DATE,
+    compra DECIMAL(6,2),
+    venta DECIMAL(6,2),
+    beneficio DECIMAL(6,2) AS(venta-compra) STORED,
     CONSTRAINT PK_PRODUCTO PRIMARY KEY (id)
 );
 ```
@@ -119,6 +122,8 @@ CREATE TABLE PERSONAL(
     apellido1 VARCHAR(100) NOT NULL,
     apellido2 VARCHAR(100),
     codTienda CHAR(36),
+    fecha_nac DATE,
+    beneficio INT AS(TIMESTAMPDIFF(YEAR, fecha_nacimiento, CURRENT_DATE)) STORED,
     CONSTRAINT PK_PERSONAL PRIMARY KEY (dni),
     CONSTRAINT FK_PERSONAL_TIENDA FOREIGN KEY (codTienda) REFERENCES TIENDA(codTienda)
         ON DELETE CASCADE
