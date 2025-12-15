@@ -98,13 +98,13 @@ INSERT INTO TIENDA (direccion, codProvincia, cantidad) VALUES
 INSERT INTO TELEFONO (numero, codTienda) VALUES
   ('600000001',(SELECT codTienda FROM TIENDA WHERE direccion='Calle A')),
   ('600000002',(SELECT codTienda FROM TIENDA WHERE direccion='Calle B')),
-  (NULL,(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
+  ('600000003',(SELECT codTienda FROM TIENDA WHERE direccion='Calle C')),
   ('600000004',(SELECT codTienda FROM TIENDA WHERE direccion='Calle D')),
   ('600000005',(SELECT codTienda FROM TIENDA WHERE direccion='Calle E')),
-  ('600000005',(SELECT codTienda FROM TIENDA WHERE direccion='Calle F')),
+  ('600000006',(SELECT codTienda FROM TIENDA WHERE direccion='Calle F')),
   ('600000007',(SELECT codTienda FROM TIENDA WHERE direccion='Calle G')),
-  (NULL,(SELECT codTienda FROM TIENDA WHERE direccion='Calle H')),
-  ('600000008',(SELECT codTienda FROM TIENDA WHERE direccion='Calle I')),
+  ('600000008',(SELECT codTienda FROM TIENDA WHERE direccion='Calle H')),
+  ('600000009',(SELECT codTienda FROM TIENDA WHERE direccion='Calle I')),
   ('600000010',(SELECT codTienda FROM TIENDA WHERE direccion='Calle J'));
 ```
 
