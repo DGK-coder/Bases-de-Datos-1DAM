@@ -66,16 +66,16 @@ INSERT INTO CATEGORIA (nombre) VALUES
 ### TABLA `PERTENECER`
 ```sql
 INSERT INTO PERTENECER (idCategoria, idProducto) VALUES
-  ((SELECT id FROM PRODUCTO WHERE nombre='Acción'),(SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Aventura'),(SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Deportes'),(SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Terror'),(SELECT id FROM PRODUCTO WHERE nombre='FIFA 24')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Estrategia'),(SELECT id FROM PRODUCTO WHERE nombre='Minecraft')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Simulación'),(SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Carreras'),(SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Shooter'),(SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Cooperativo'),(SELECT id FROM PRODUCTO WHERE nombre='Elden Ring')),
-  ((SELECT id FROM PRODUCTO WHERE nombre='Familiar'),(SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'));
+  ((SELECT id FROM CATEGORIA WHERE nombre='Acción'),(SELECT id FROM PRODUCTO WHERE nombre='The Legend of Zelda: Tears of the Kingdom')),
+  ((SELECT id FROM CATEGORIA WHERE nombre='Aventura'),(SELECT id FROM PRODUCTO WHERE nombre='God of War Ragnarök')),
+  ((SELECT id FROM CATEGORIA WHERE nombre='Deportes'),(SELECT id FROM PRODUCTO WHERE nombre='Call of Duty: Modern Warfare III')),
+  ((SELECT id FROM CATEGORIA WHERE nombre='Terror'),(SELECT id FROM PRODUCTO WHERE nombre='FIFA 24')),
+  ((SELECT id FROM CATEGORIA WHERE nombre='Estrategia'),(SELECT id FROM PRODUCTO WHERE nombre='Minecraft')),
+  ((SELECT id FROM CATEGORIA WHERE nombre='Simulación'),(SELECT id FROM PRODUCTO WHERE nombre='Hollow Knight')),
+  ((SELECT id FROM CATEGORIA WHERE nombre='Carreras'),(SELECT id FROM PRODUCTO WHERE nombre='Cyberpunk 2077')),
+  ((SELECT id FROM CATEGORIA WHERE nombre='Shooter'),(SELECT id FROM PRODUCTO WHERE nombre='Stardew Valley')),
+  ((SELECT id FROM CATEGORIA WHERE nombre='Cooperativo'),(SELECT id FROM PRODUCTO WHERE nombre='Elden Ring')),
+  ((SELECT id FROM CATEGORIA WHERE nombre='Familiar'),(SELECT id FROM PRODUCTO WHERE nombre='Resident Evil 4 Remake'));
 ```
 
 ### TABLA `TIENDA`
